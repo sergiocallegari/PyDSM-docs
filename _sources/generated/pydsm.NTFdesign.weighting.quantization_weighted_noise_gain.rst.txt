@@ -1,0 +1,6 @@
+pydsm.NTFdesign.weighting.quantization_weighted_noise_gain
+==========================================================
+
+.. currentmodule:: pydsm.NTFdesign.weighting
+
+.. autofunction:: quantization_weighted_noise_gain

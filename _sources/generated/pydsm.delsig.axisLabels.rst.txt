@@ -1,0 +1,6 @@
+pydsm.delsig.axisLabels
+=======================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: axisLabels

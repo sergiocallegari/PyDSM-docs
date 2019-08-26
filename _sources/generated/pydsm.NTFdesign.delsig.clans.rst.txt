@@ -1,0 +1,6 @@
+pydsm.NTFdesign.delsig.clans
+============================
+
+.. currentmodule:: pydsm.NTFdesign.delsig
+
+.. autofunction:: clans

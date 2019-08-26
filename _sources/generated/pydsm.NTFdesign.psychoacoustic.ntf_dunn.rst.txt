@@ -1,0 +1,6 @@
+pydsm.NTFdesign.psychoacoustic.ntf_dunn
+=======================================
+
+.. currentmodule:: pydsm.NTFdesign.psychoacoustic
+
+.. autofunction:: ntf_dunn

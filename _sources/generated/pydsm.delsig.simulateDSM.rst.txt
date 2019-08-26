@@ -1,0 +1,6 @@
+pydsm.delsig.simulateDSM
+========================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: simulateDSM

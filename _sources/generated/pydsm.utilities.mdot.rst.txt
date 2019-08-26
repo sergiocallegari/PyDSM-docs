@@ -1,0 +1,6 @@
+pydsm.utilities.mdot
+====================
+
+.. currentmodule:: pydsm.utilities
+
+.. autofunction:: mdot

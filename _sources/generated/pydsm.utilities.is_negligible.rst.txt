@@ -1,0 +1,6 @@
+pydsm.utilities.is_negligible
+=============================
+
+.. currentmodule:: pydsm.utilities
+
+.. autofunction:: is_negligible

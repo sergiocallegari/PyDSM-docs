@@ -1,0 +1,6 @@
+pydsm.NTFdesign.weighting.synthesize_ntf_from_noise_weighting
+=============================================================
+
+.. currentmodule:: pydsm.NTFdesign.weighting
+
+.. autofunction:: synthesize_ntf_from_noise_weighting

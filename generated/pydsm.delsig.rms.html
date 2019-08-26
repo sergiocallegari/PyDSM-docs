@@ -1,0 +1,152 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pydsm.delsig.rms &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pydsm.delsig.plotPZ" href="pydsm.delsig.plotPZ.html" />
+    <link rel="prev" title="pydsm.delsig.undbm" href="pydsm.delsig.undbm.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="../index.html">
+            <img class="logo" src="../_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="pydsm.delsig.undbm.html" title="pydsm.delsig.undbm"
+             accesskey="P">previous</a> |
+          <a href="pydsm.delsig.plotPZ.html" title="pydsm.delsig.plotPZ"
+             accesskey="N">next</a> |
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pydsm-delsig-rms">
+<h1>pydsm.delsig.rms<a class="headerlink" href="#pydsm-delsig-rms" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydsm.delsig.rms">
+<code class="sig-prename descclassname">pydsm.delsig.</code><code class="sig-name descname">rms</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">no_dc=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.delsig.rms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute root means square value (RMS) of a vector.</p>
+<p>Given an input vector x, this function computes the square root of
+the sum of the squared elements of x, optionally removing the mean value
+of x from its entries beforehand.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>x</strong><span class="classifier">array like</span></dt><dd><p>input vector</p>
+</dd>
+<dt><strong>no_dc</strong><span class="classifier">bool, optional</span></dt><dd><p>whether to remove the mean value, default is False</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>v</strong><span class="classifier">float</span></dt><dd><p>RMS value</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>In formal terms, the operation being performed on <img class="math" src="../_images/math/5a939c5280da7202ca4531f175a7780ad5e1f80a.png" alt="n"/>-entry vector
+<img class="math" src="../_images/math/888f7c323ac0341871e867220ae2d76467d74d6e.png" alt="x"/> to return rms value <img class="math" src="../_images/math/02d98909b5d6acd6a7ff927d4d42790bdd407d58.png" alt="v"/> is</p>
+<div class="math">
+<p><img src="../_images/math/9c1f0aab312270fbb6034b5a3e994642709bd44d.png" alt="v = \sqrt{\frac{1}{n}\sum_{i=0}^n x_i^2}"/></p>
+</div><p>Input x must be a 1 dimensional vector. If x is a matrix, the DELSIG
+version of rms returns a meaningless result, and so this function does…
+just a different result.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference.html">Reference guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../reference.html#main-modules">Main modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference.html#utility-modules">Utility modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference.html#error-handling">Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="pydsm.delsig.undbm.html" title="pydsm.delsig.undbm"
+              >previous</a> |
+            <a href="pydsm.delsig.plotPZ.html" title="pydsm.delsig.plotPZ"
+              >next</a> |
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

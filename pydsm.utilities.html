@@ -1,0 +1,171 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Generic utility functions (pydsm.utilities) &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydsm.utilities.is_negligible" href="generated/pydsm.utilities.is_negligible.html" />
+    <link rel="prev" title="pydsm.relab.shiftdim" href="generated/pydsm.relab.shiftdim.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="generated/pydsm.relab.shiftdim.html" title="pydsm.relab.shiftdim"
+             accesskey="P">previous</a> |
+          <a href="generated/pydsm.utilities.is_negligible.html" title="pydsm.utilities.is_negligible"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="module-pydsm.utilities"></span><div class="section" id="generic-utility-functions-pydsm-utilities">
+<h1>Generic utility functions (<a class="reference internal" href="#module-pydsm.utilities" title="pydsm.utilities"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.utilities</span></code></a>)<a class="headerlink" href="#generic-utility-functions-pydsm-utilities" title="Permalink to this headline">¶</a></h1>
+<p>This module includes some generic utility functions. The stability of these
+interfaces may not be guaranteed.</p>
+<div class="section" id="constants">
+<h2>Constants<a class="headerlink" href="#constants" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="pydsm.utilities.EPS">
+<code class="sig-prename descclassname">pydsm.utilities.</code><code class="sig-name descname">EPS</code><a class="headerlink" href="#pydsm.utilities.EPS" title="Permalink to this definition">¶</a></dt>
+<dd><p>The value returned by <code class="docutils literal notranslate"><span class="pre">np.finfo(float).eps</span></code>, namely the smallest
+representable positive numebr such that <code class="docutils literal notranslate"><span class="pre">1.0</span> <span class="pre">+</span> <span class="pre">EPS</span> <span class="pre">!=</span> <span class="pre">1</span></code>.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.utilities.is_negligible.html#pydsm.utilities.is_negligible" title="pydsm.utilities.is_negligible"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_negligible</span></code></a>(x[, tol])</p></td>
+<td><p>Check if a number is close to zero.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.utilities.chop.html#pydsm.utilities.chop" title="pydsm.utilities.chop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">chop</span></code></a>(x[, tol])</p></td>
+<td><p>Chop to zero input numbers that are close to zero.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.utilities.mdot.html#pydsm.utilities.mdot" title="pydsm.utilities.mdot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mdot</span></code></a>(\*args)</p></td>
+<td><p>Dot product taking multiple arguments.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.utilities.digested_options.html#pydsm.utilities.digested_options" title="pydsm.utilities.digested_options"><code class="xref py py-obj docutils literal notranslate"><span class="pre">digested_options</span></code></a>(opts, defaults[, keys, …])</p></td>
+<td><p>Helper function for the management of default options</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="deprecated-functions">
+<h2>Deprecated functions<a class="headerlink" href="#deprecated-functions" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.utilities.db.html#pydsm.utilities.db" title="pydsm.utilities.db"><code class="xref py py-obj docutils literal notranslate"><span class="pre">db</span></code></a>(x[, signal_type, R])</p></td>
+<td><p>Alias for <a class="reference internal" href="generated/pydsm.relab.db.html#pydsm.relab.db" title="pydsm.relab.db"><code class="xref py py-func docutils literal notranslate"><span class="pre">pydsm.relab.db()</span></code></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.utilities.cplxpair.html#pydsm.utilities.cplxpair" title="pydsm.utilities.cplxpair"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cplxpair</span></code></a>(x[, tol])</p></td>
+<td><p>Alias for <a class="reference internal" href="generated/pydsm.relab.cplxpair.html#pydsm.relab.cplxpair" title="pydsm.relab.cplxpair"><code class="xref py py-func docutils literal notranslate"><span class="pre">pydsm.relab.cplxpair()</span></code></a>.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="reference.html#main-modules">Main modules</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="reference.html#utility-modules">Utility modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html#error-handling">Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="generated/pydsm.relab.shiftdim.html" title="pydsm.relab.shiftdim"
+              >previous</a> |
+            <a href="generated/pydsm.utilities.is_negligible.html" title="pydsm.utilities.is_negligible"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

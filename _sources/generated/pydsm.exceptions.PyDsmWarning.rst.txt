@@ -1,0 +1,6 @@
+pydsm.exceptions.PyDsmWarning
+=============================
+
+.. currentmodule:: pydsm.exceptions
+
+.. autoexception:: PyDsmWarning

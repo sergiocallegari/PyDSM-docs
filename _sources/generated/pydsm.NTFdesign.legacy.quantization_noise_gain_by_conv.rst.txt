@@ -1,0 +1,6 @@
+pydsm.NTFdesign.legacy.quantization_noise_gain_by_conv
+======================================================
+
+.. currentmodule:: pydsm.NTFdesign.legacy
+
+.. autofunction:: quantization_noise_gain_by_conv

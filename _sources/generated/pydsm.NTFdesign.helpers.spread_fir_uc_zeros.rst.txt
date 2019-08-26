@@ -1,0 +1,6 @@
+pydsm.NTFdesign.helpers.spread_fir_uc_zeros
+===========================================
+
+.. currentmodule:: pydsm.NTFdesign.helpers
+
+.. autofunction:: spread_fir_uc_zeros

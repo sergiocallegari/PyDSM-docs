@@ -1,0 +1,6 @@
+pydsm.utilities.cplxpair
+========================
+
+.. currentmodule:: pydsm.utilities
+
+.. autofunction:: cplxpair

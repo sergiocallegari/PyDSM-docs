@@ -1,0 +1,6 @@
+pydsm.NTFdesign.minmax.synthesize_ntf_minmax
+============================================
+
+.. currentmodule:: pydsm.NTFdesign.minmax
+
+.. autofunction:: synthesize_ntf_minmax

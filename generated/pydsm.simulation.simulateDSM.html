@@ -1,0 +1,224 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pydsm.simulation.simulateDSM &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pydsm.simulation.ds_quantize" href="pydsm.simulation.ds_quantize.html" />
+    <link rel="prev" title="Simulation of Delta Sigma modulators (pydsm.simulation)" href="../pydsm.simulation.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="../index.html">
+            <img class="logo" src="../_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="../pydsm.simulation.html" title="Simulation of Delta Sigma modulators (pydsm.simulation)"
+             accesskey="P">previous</a> |
+          <a href="pydsm.simulation.ds_quantize.html" title="pydsm.simulation.ds_quantize"
+             accesskey="N">next</a> |
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pydsm-simulation-simulatedsm">
+<h1>pydsm.simulation.simulateDSM<a class="headerlink" href="#pydsm-simulation-simulatedsm" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydsm.simulation.simulateDSM">
+<code class="sig-prename descclassname">pydsm.simulation.</code><code class="sig-name descname">simulateDSM</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">arg2</em>, <em class="sig-param">nlev=2</em>, <em class="sig-param">x0=0</em>, <em class="sig-param">store_xn=False</em>, <em class="sig-param">store_xmax=False</em>, <em class="sig-param">store_y=False</em>, <em class="sig-param">**options</em><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.simulation.simulateDSM" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the output of a general delta-sigma modulator.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>u</strong><span class="classifier">array_like or matrix_like</span></dt><dd><p>modulator input. Multiple inputs are allowed. In this case,
+u is a matrix with as many rows as the desired inputs</p>
+</dd>
+<dt><strong>arg2</strong><span class="classifier">tuple</span></dt><dd><p>modulator structure in ABDC matrix form or modulator NTF
+as zpk tuple. In the latter case, the modulator STF is assumed
+to be unitary.</p>
+</dd>
+<dt><strong>nlev</strong><span class="classifier">int or array of ints, optional</span></dt><dd><p>number of levels in quantizer. Multiple quantizers can be
+specified by making nlev a vector. Defaults to 2.</p>
+</dd>
+<dt><strong>x0</strong><span class="classifier">array_like of reals or 0</span></dt><dd><p>modulator intitial state vector. Assigning it to 0 is a shorthand
+for an appropriate length zero vector. Defaults to 0.</p>
+</dd>
+<dt><strong>store_xn</strong><span class="classifier">bool, optional</span></dt><dd><p>switch controlling the storage of state evolution.
+See description of return values. Defaults to False.</p>
+</dd>
+<dt><strong>store_xmax</strong><span class="classifier">bool, optional</span></dt><dd><p>switch controlling the storage of maxima in state variables.
+See description of return values. Defaults to False.</p>
+</dd>
+<dt><strong>store_y</strong><span class="classifier">bool, optional</span></dt><dd><p>switch controlling the storage of quantizer input values.
+See description of return values. Defaults to False.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>v</strong><span class="classifier">ndarray</span></dt><dd><p>samples at the output of the modulator, one per input sample.
+If there are multiple quantizers, then v is a matrix, with as many
+columns as the number of samples and as many rows as the number of
+quantizers.</p>
+</dd>
+<dt><strong>xn</strong><span class="classifier">ndarray</span></dt><dd><p>internal state of the modulator. If store_xn is set to True, then
+it includes a state snapshot per input sample. In this case, xn
+is a matrix, with as many columns as the number of samples and as
+many rows as the number of state variables. If store_xn is False,
+then xn is a vector containing a snapshot of the last state.</p>
+</dd>
+<dt><strong>xmax</strong><span class="classifier">ndarray</span></dt><dd><p>maximum absolute value reached by the state variables.
+If store_xmax is set to True, then xmax is a vector with as many
+entries as the number of state variables. Otherwise it is null.</p>
+</dd>
+<dt><strong>y</strong><span class="classifier">ndarray</span></dt><dd><p>samples at the quantizer input(s), one per input sample.
+If store_y is set to True, then y records the quantizer(s)
+input(s). If there are multiple quantizers, then y is a matrix,
+with as many columns as the number of samples and as many rows as
+the number of quantizers. If store_y is False, then y is null.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>backend</strong><span class="classifier">string</span></dt><dd><p>Use: ‘auto’ for automatic selection; ‘scipy’ for pure python
+simulator; ‘cblas’ for simulator using platform cblas library;
+‘scipy_blas’ for simulator using scipy provided blas. Defaults can
+be set by changing the function <code class="docutils literal notranslate"><span class="pre">default_options</span></code> attribute.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><dl>
+<dt>ValueError</dt><dd><p>‘Incorrect modulator specification’, if the modulator specification
+is inconsistent.</p>
+<p>‘Invalid argument: nlev must be convertible into a 1D int array’,
+if the quantizer specification is incorrect.</p>
+<p>‘Invalid argument: u must be convertible into a 2D float array’,
+if the input specification is incorrect.</p>
+<p>‘Incorrect initial condition specification’ if the initial condition
+specification for the modulator filters is incorrect.</p>
+</dd>
+<dt>RuntimeError</dt><dd><p>‘Unsupported simulator backend xxx’ if an unsupported backend is
+required</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Warns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>PyDsmSlowPathWarning</dt><dd><p>‘Running the slow version of simulateDSM’, if the simulator being
+used is the slow one, coded in pure Python.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The quantizer is ideal, producing integer outputs centered about zero.
+Quantizers with an even number of levels are of the mid-rise type and
+produce outputs which are odd integers. Quantizers with an odd number of
+levels are of the mid-tread type and produce outputs which are even
+integers.</p>
+<p>The modulator structure being simulated is a block diagonal one, as
+returned by the zpk2ss function.</p>
+<p>Setting store_xn, store_xmax and store_y to False speeds up the operation.</p>
+<p>There are actually two simulators, sharing this function as a front end.
+One of them is coded in pure python and quite slow. The other one is
+coded in C (actually in Cython), and directly accesses low level cblas
+functions. The codebase to be used is controlled by the module switch
+<cite>use_fast_simulator</cite>.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference.html">Reference guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../reference.html#main-modules">Main modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference.html#utility-modules">Utility modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference.html#error-handling">Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="../pydsm.simulation.html" title="Simulation of Delta Sigma modulators (pydsm.simulation)"
+              >previous</a> |
+            <a href="pydsm.simulation.ds_quantize.html" title="pydsm.simulation.ds_quantize"
+              >next</a> |
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,6 @@
+pydsm.ir.impulse_response
+=========================
+
+.. currentmodule:: pydsm.ir
+
+.. autofunction:: impulse_response

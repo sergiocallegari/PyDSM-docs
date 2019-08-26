@@ -1,0 +1,251 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Acoustic weighting functions (pydsm.audio_weightings) &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydsm.audio_weightings.a_weighting" href="generated/pydsm.audio_weightings.a_weighting.html" />
+    <link rel="prev" title="pydsm.simulation.ds_quantize" href="generated/pydsm.simulation.ds_quantize.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="generated/pydsm.simulation.ds_quantize.html" title="pydsm.simulation.ds_quantize"
+             accesskey="P">previous</a> |
+          <a href="generated/pydsm.audio_weightings.a_weighting.html" title="pydsm.audio_weightings.a_weighting"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="module-pydsm.audio_weightings"></span><div class="section" id="acoustic-weighting-functions-pydsm-audio-weightings">
+<h1>Acoustic weighting functions (<a class="reference internal" href="#module-pydsm.audio_weightings" title="pydsm.audio_weightings"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.audio_weightings</span></code></a>)<a class="headerlink" href="#acoustic-weighting-functions-pydsm-audio-weightings" title="Permalink to this headline">¶</a></h1>
+<p>Some standard acoustic weighting functions.</p>
+<p>This module includes the A-, B- and C-weightings from the
+ANSI Standards S1.4-1983 and S1.42-2001.</p>
+<p>It also includes the D-weighting from the now withdrawn IEC 537.</p>
+<p>It also includes the F-weighting proposed by R. A. Wannamaker.</p>
+<p>The weighting functions can be expressed either in terms of
+acoustic power or in terms of signal amplitude.</p>
+<p>The weighting functions are also available in terms of a filter-based
+implementation. In this case, be careful since no normalization is
+present so that the gain at 1 kHz can be arbitrary. The filter
+transfer function is referred to a signal amplitude weighting.</p>
+<div class="section" id="weighting-functions">
+<h2>Weighting functions<a class="headerlink" href="#weighting-functions" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.audio_weightings.a_weighting.html#pydsm.audio_weightings.a_weighting" title="pydsm.audio_weightings.a_weighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">a_weighting</span></code></a>(f[, normal, power])</p></td>
+<td><p>Returns the A-weighting as a function of frequency.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.audio_weightings.b_weighting.html#pydsm.audio_weightings.b_weighting" title="pydsm.audio_weightings.b_weighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">b_weighting</span></code></a>(f[, normal, power])</p></td>
+<td><p>Returns the B-weighting as a function of frequency.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.audio_weightings.c_weighting.html#pydsm.audio_weightings.c_weighting" title="pydsm.audio_weightings.c_weighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">c_weighting</span></code></a>(f[, normal, power])</p></td>
+<td><p>Returns the C-weighting as a function of frequency.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.audio_weightings.d_weighting.html#pydsm.audio_weightings.d_weighting" title="pydsm.audio_weightings.d_weighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">d_weighting</span></code></a>(f[, normal, power])</p></td>
+<td><p>Returns the D-weighting as a function of frequency.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.audio_weightings.f_weighting.html#pydsm.audio_weightings.f_weighting" title="pydsm.audio_weightings.f_weighting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">f_weighting</span></code></a>(f[, normal, power])</p></td>
+<td><p>Returns the F-weighting as a function of frequency.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="filter-implementation-of-weighting-functions">
+<h2>Filter implementation of weighting functions<a class="headerlink" href="#filter-implementation-of-weighting-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="pydsm.audio_weightings.a_zpk">
+<code class="sig-prename descclassname">pydsm.audio_weightings.</code><code class="sig-name descname">a_zpk</code><a class="headerlink" href="#pydsm.audio_weightings.a_zpk" title="Permalink to this definition">¶</a></dt>
+<dd><p>A-weighting filter in zpk form.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="pydsm.audio_weightings.b_zpk">
+<code class="sig-prename descclassname">pydsm.audio_weightings.</code><code class="sig-name descname">b_zpk</code><a class="headerlink" href="#pydsm.audio_weightings.b_zpk" title="Permalink to this definition">¶</a></dt>
+<dd><p>B-weighting filter in zpk form.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="pydsm.audio_weightings.c_zpk">
+<code class="sig-prename descclassname">pydsm.audio_weightings.</code><code class="sig-name descname">c_zpk</code><a class="headerlink" href="#pydsm.audio_weightings.c_zpk" title="Permalink to this definition">¶</a></dt>
+<dd><p>C-weighting filter in zpk form.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="pydsm.audio_weightings.d_zpk">
+<code class="sig-prename descclassname">pydsm.audio_weightings.</code><code class="sig-name descname">d_zpk</code><a class="headerlink" href="#pydsm.audio_weightings.d_zpk" title="Permalink to this definition">¶</a></dt>
+<dd><p>D-weighting filter in zpk form.</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="pydsm.audio_weightings.f_zpk">
+<code class="sig-prename descclassname">pydsm.audio_weightings.</code><code class="sig-name descname">f_zpk</code><a class="headerlink" href="#pydsm.audio_weightings.f_zpk" title="Permalink to this definition">¶</a></dt>
+<dd><p>F-weighting filter in zpk form.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="normalization-constants">
+<h2>Normalization constants<a class="headerlink" href="#normalization-constants" title="Permalink to this headline">¶</a></h2>
+<dl class="data">
+<dt id="pydsm.audio_weightings.a_weighting_gain">
+<code class="sig-prename descclassname">pydsm.audio_weightings.</code><code class="sig-name descname">a_weighting_gain</code><a class="headerlink" href="#pydsm.audio_weightings.a_weighting_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalization gain to apply to A-weighting filter (namely, the
+attenuation of the filter at 1 kHz)</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="pydsm.audio_weightings.b_weighting_gain">
+<code class="sig-prename descclassname">pydsm.audio_weightings.</code><code class="sig-name descname">b_weighting_gain</code><a class="headerlink" href="#pydsm.audio_weightings.b_weighting_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalization gain to apply to B-weighting filter (namely, the
+attenuation of the filter at 1 kHz)</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="pydsm.audio_weightings.c_weighting_gain">
+<code class="sig-prename descclassname">pydsm.audio_weightings.</code><code class="sig-name descname">c_weighting_gain</code><a class="headerlink" href="#pydsm.audio_weightings.c_weighting_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalization gain to apply to C-weighting filter (namely, the
+attenuation of the filter at 1 kHz)</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="pydsm.audio_weightings.d_weighting_gain">
+<code class="sig-prename descclassname">pydsm.audio_weightings.</code><code class="sig-name descname">d_weighting_gain</code><a class="headerlink" href="#pydsm.audio_weightings.d_weighting_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalization gain to apply to D-weighting filter (namely, the
+attenuation of the filter at 1 kHz)</p>
+</dd></dl>
+
+<dl class="data">
+<dt id="pydsm.audio_weightings.f_weighting_gain">
+<code class="sig-prename descclassname">pydsm.audio_weightings.</code><code class="sig-name descname">f_weighting_gain</code><a class="headerlink" href="#pydsm.audio_weightings.f_weighting_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Normalization gain to apply to F-weighting filter (namely, the
+attenuation of the filter at 1 kHz)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<p>The ANSI and IEC weightings are also described in Wikipedia [1]
+and summarized in some illustrative web pages such as <a class="reference internal" href="#rbcae3b66b475-2" id="id1">[2]</a> and
+<a class="reference internal" href="#rbcae3b66b475-3" id="id2">[3]</a>. The F-weighting is documented in <a class="reference internal" href="#rbcae3b66b475-4" id="id3">[4]</a>.</p>
+<p>The filter-based implementation of the F-weighting is so high-order that
+evaluation of the transfer function may require special care.</p>
+<dl class="citation">
+<dt class="label" id="rbcae3b66b475-1"><span class="brackets">1</span></dt>
+<dd><p>Wikipedia (<a class="reference external" href="http://en.wikipedia.org/wiki/A-weighting">http://en.wikipedia.org/wiki/A-weighting</a>)</p>
+</dd>
+<dt class="label" id="rbcae3b66b475-2"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
+<dd><p>Cross spectrum (<a class="reference external" href="http://www.cross-spectrum.com/audio/weighting.html">http://www.cross-spectrum.com/audio/weighting.html</a>)</p>
+</dd>
+<dt class="label" id="rbcae3b66b475-3"><span class="brackets"><a class="fn-backref" href="#id2">3</a></span></dt>
+<dd><p>Product Technology Parters “Noise Measurement Briefing”
+(<a class="reference external" href="http://www.ptpart.co.uk/noise-measurement-briefing/">http://www.ptpart.co.uk/noise-measurement-briefing/</a>)</p>
+</dd>
+<dt class="label" id="rbcae3b66b475-4"><span class="brackets"><a class="fn-backref" href="#id3">4</a></span></dt>
+<dd><p>Robert A. Wannamaker “Psychoacoustically Optimal Noise
+Shaping,” J. Audio Eng. Soc., Vol. 40 No. 7/8 1992 July/August</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="reference.html#main-modules">Main modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html#utility-modules">Utility modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html#error-handling">Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="generated/pydsm.simulation.ds_quantize.html" title="pydsm.simulation.ds_quantize"
+              >previous</a> |
+            <a href="generated/pydsm.audio_weightings.a_weighting.html" title="pydsm.audio_weightings.a_weighting"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

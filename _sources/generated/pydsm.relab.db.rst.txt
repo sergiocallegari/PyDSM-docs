@@ -1,0 +1,6 @@
+pydsm.relab.db
+==============
+
+.. currentmodule:: pydsm.relab
+
+.. autofunction:: db

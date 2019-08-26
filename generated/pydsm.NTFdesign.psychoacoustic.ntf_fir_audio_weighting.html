@@ -1,0 +1,195 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pydsm.NTFdesign.psychoacoustic.ntf_fir_audio_weighting &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Computation of NTF related merit factors (pydsm.NTFdesign.merit_factors)" href="../pydsm.NTFdesign.merit_factors.html" />
+    <link rel="prev" title="pydsm.NTFdesign.psychoacoustic.ntf_dunn" href="pydsm.NTFdesign.psychoacoustic.ntf_dunn.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="../index.html">
+            <img class="logo" src="../_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="pydsm.NTFdesign.psychoacoustic.ntf_dunn.html" title="pydsm.NTFdesign.psychoacoustic.ntf_dunn"
+             accesskey="P">previous</a> |
+          <a href="../pydsm.NTFdesign.merit_factors.html" title="Computation of NTF related merit factors (pydsm.NTFdesign.merit_factors)"
+             accesskey="N">next</a> |
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pydsm-ntfdesign-psychoacoustic-ntf-fir-audio-weighting">
+<h1>pydsm.NTFdesign.psychoacoustic.ntf_fir_audio_weighting<a class="headerlink" href="#pydsm-ntfdesign-psychoacoustic-ntf-fir-audio-weighting" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydsm.NTFdesign.psychoacoustic.ntf_fir_audio_weighting">
+<code class="sig-prename descclassname">pydsm.NTFdesign.psychoacoustic.</code><code class="sig-name descname">ntf_fir_audio_weighting</code><span class="sig-paren">(</span><em class="sig-param">order</em>, <em class="sig-param">osr</em>, <em class="sig-param">audio_weighting='f'</em>, <em class="sig-param">audio_band=22050.0</em>, <em class="sig-param">max_attn=120</em>, <em class="sig-param">H_inf=1.5</em>, <em class="sig-param">normalize='auto'</em>, <em class="sig-param">**options</em><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.NTFdesign.psychoacoustic.ntf_fir_audio_weighting" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synthesize a FIR NTF based on an audio weighting function.</p>
+<p>The ΔΣ modulator NTF is designed after an audio weigthing function stating
+how loudly noise is perceived at the various frequencies.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>order</strong><span class="classifier">int</span></dt><dd><p>Delta sigma modulator order</p>
+</dd>
+<dt><strong>osr</strong><span class="classifier">float</span></dt><dd><p>the oversampling ratio</p>
+</dd>
+<dt><strong>audio_weighting</strong><span class="classifier">callable or string</span></dt><dd><p>audio weighting function. This is a function taking a frequency and
+expressing the weighting at that frequency in terms of acoustic power.
+Functions in the <a class="reference internal" href="../pydsm.audio_weightings.html#module-pydsm.audio_weightings" title="pydsm.audio_weightings"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.audio_weightings</span></code></a> module are suitable
+here. Note that the function argument frequency is a real frequency in
+Hz.</p>
+</dd>
+<dt><strong>audio_band</strong><span class="classifier">float, optional</span></dt><dd><p>how large the audio bandwidth to consider. The signal band is from
+0 to audio_band Hz. Defaults to 22.05 kHz</p>
+</dd>
+<dt><strong>max_attn</strong><span class="classifier">float, optional</span></dt><dd><p>clip very large attenuations to this value (in dB). This helps the
+convergenze of the optimization routine used to design the NTF.
+Defaults to 120 dB.</p>
+</dd>
+<dt><strong>H_inf</strong><span class="classifier">real, optional</span></dt><dd><p>Max peak NTF gain, defaults to 1.5, used to enforce the Lee criterion</p>
+</dd>
+<dt><strong>normalize</strong><span class="classifier">string or real, optional</span></dt><dd><p>Normalization to apply to the quadratic form used in the NTF
+selection. Defaults to ‘auto’ which means setting the top left entry
+in the matrix Q defining the quadratic form to 1.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>ntf</strong><span class="classifier">ndarray</span></dt><dd><p>FIR NTF in zpk form</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>show_progress</strong><span class="classifier">bool, optional</span></dt><dd><p>provide extended output, default is True and can be updated by
+changing the function <code class="docutils literal notranslate"><span class="pre">default_options</span></code> attribute.</p>
+</dd>
+<dt><strong>cvxopt_opts</strong><span class="classifier">dictionary, optional</span></dt><dd><p>A dictionary of options for the <code class="docutils literal notranslate"><span class="pre">cvxopt</span></code> optimizer
+Allowed options include:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">maxiters</span></code></dt><dd><p>Maximum number of iterations (defaults to 100)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">abstol</span></code></dt><dd><p>Absolute accuracy (defaults to 1e-7)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">reltol</span></code></dt><dd><p>Relative accuracy (defaults to 1e-6)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">feastol</span></code></dt><dd><p>Tolerance for feasibility conditions (defaults to 1e-6)</p>
+</dd>
+</dl>
+<p>Do not use other options since they could break <code class="xref py py-mod docutils literal notranslate"><span class="pre">cvxopt</span></code> in
+unexpected ways. Defaults can be set by changing the function
+<code class="docutils literal notranslate"><span class="pre">default_options</span></code> attribute.</p>
+</dd>
+<dt><strong>quad_opts</strong><span class="classifier">dictionary, optional</span></dt><dd><p>Parameters to be passed to the <code class="xref py py-func docutils literal notranslate"><span class="pre">scipy.minimize.quad()</span></code> function
+used internally as an integrator. Allowed options are <code class="docutils literal notranslate"><span class="pre">epsabs</span></code>,
+<code class="docutils literal notranslate"><span class="pre">epsrel</span></code>, <code class="docutils literal notranslate"><span class="pre">limit</span></code>, <code class="docutils literal notranslate"><span class="pre">points</span></code>. Do not use other options since they
+could break the integrator in unexpected ways. Defaults can be set by
+changing the function <code class="docutils literal notranslate"><span class="pre">default_options</span></code> attribute.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.integrate.quad</span></code></dt><dd><p>for the meaning of the integrator parameters.</p>
+</dd>
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">cvxopt</span></code></dt><dd><p>for the optimizer parameters</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="pydsm.NTFdesign.psychoacoustic.ntf_dunn.html" title="pydsm.NTFdesign.psychoacoustic.ntf_dunn"
+              >previous</a> |
+            <a href="../pydsm.NTFdesign.merit_factors.html" title="Computation of NTF related merit factors (pydsm.NTFdesign.merit_factors)"
+              >next</a> |
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

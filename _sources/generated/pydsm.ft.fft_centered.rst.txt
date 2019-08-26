@@ -1,0 +1,6 @@
+pydsm.ft.fft_centered
+=====================
+
+.. currentmodule:: pydsm.ft
+
+.. autofunction:: fft_centered

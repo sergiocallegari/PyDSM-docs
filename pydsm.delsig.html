@@ -1,0 +1,252 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Code ported from the DELSIG toolbox by R. Schreier (pydsm.delsig) &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydsm.delsig.synthesizeNTF" href="generated/pydsm.delsig.synthesizeNTF.html" />
+    <link rel="prev" title="Reference guide" href="reference.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="reference.html" title="Reference guide"
+             accesskey="P">previous</a> |
+          <a href="generated/pydsm.delsig.synthesizeNTF.html" title="pydsm.delsig.synthesizeNTF"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="module-pydsm.delsig"></span><div class="section" id="code-ported-from-the-delsig-toolbox-by-r-schreier-pydsm-delsig">
+<h1>Code ported from the DELSIG toolbox by R. Schreier (<a class="reference internal" href="#module-pydsm.delsig" title="pydsm.delsig"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.delsig</span></code></a>)<a class="headerlink" href="#code-ported-from-the-delsig-toolbox-by-r-schreier-pydsm-delsig" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="key-functions">
+<h2>Key functions<a class="headerlink" href="#key-functions" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.delsig.synthesizeNTF.html#pydsm.delsig.synthesizeNTF" title="pydsm.delsig.synthesizeNTF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">synthesizeNTF</span></code></a>([order, osr, opt, H_inf, f0])</p></td>
+<td><p>Synthesizes an NTF for a DS modulator by Schreier’s approach.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.delsig.clans.html#pydsm.delsig.clans" title="pydsm.delsig.clans"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clans</span></code></a>([order, osr, nq, rmax, opt])</p></td>
+<td><p>Synthesize the NTF for a ΔΣM w/ multibit quantizer by the CLANS method.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.delsig.synthesizeChebyshevNTF.html#pydsm.delsig.synthesizeChebyshevNTF" title="pydsm.delsig.synthesizeChebyshevNTF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">synthesizeChebyshevNTF</span></code></a>([order, osr, opt, …])</p></td>
+<td><p>Synthesize the NTF for a DS modulator by a Chebyshev function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.delsig.simulateDSM.html#pydsm.delsig.simulateDSM" title="pydsm.delsig.simulateDSM"><code class="xref py py-obj docutils literal notranslate"><span class="pre">simulateDSM</span></code></a>(u, arg2[, nlev, x0, store_xn, …])</p></td>
+<td><p>Computes the output of a general delta-sigma modulator.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="other-selected-functions">
+<h2>Other selected functions<a class="headerlink" href="#other-selected-functions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="delta-sigma-utilities">
+<h3>Delta sigma utilities<a class="headerlink" href="#delta-sigma-utilities" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.delsig.partitionABCD.html#pydsm.delsig.partitionABCD" title="pydsm.delsig.partitionABCD"><code class="xref py py-obj docutils literal notranslate"><span class="pre">partitionABCD</span></code></a>(ABCD[, m])</p></td>
+<td><p>Partition ABCD ss description in A, B, C, D for an m-input sytem</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.delsig.rmsGain.html#pydsm.delsig.rmsGain" title="pydsm.delsig.rmsGain"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rmsGain</span></code></a>(H, f1, f2[, N])</p></td>
+<td><p>Compute the root-mean-square gain of a DT transfer function.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="general-utilities">
+<h3>General utilities<a class="headerlink" href="#general-utilities" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.delsig.dbv.html#pydsm.delsig.dbv" title="pydsm.delsig.dbv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dbv</span></code></a>(x)</p></td>
+<td><p>Converts a voltage (or current) ratio to dB.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.delsig.dbp.html#pydsm.delsig.dbp" title="pydsm.delsig.dbp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dbp</span></code></a>(x)</p></td>
+<td><p>Converts a power ratio to dB.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.delsig.undbv.html#pydsm.delsig.undbv" title="pydsm.delsig.undbv"><code class="xref py py-obj docutils literal notranslate"><span class="pre">undbv</span></code></a>(x)</p></td>
+<td><p>Converts argument from db to a voltage ratio.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.delsig.undbp.html#pydsm.delsig.undbp" title="pydsm.delsig.undbp"><code class="xref py py-obj docutils literal notranslate"><span class="pre">undbp</span></code></a>(x)</p></td>
+<td><p>Converts argument from db to a power ratio.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.delsig.dbm.html#pydsm.delsig.dbm" title="pydsm.delsig.dbm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dbm</span></code></a>(v[, R])</p></td>
+<td><p>Converts argument from rms voltage to dBm.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.delsig.undbm.html#pydsm.delsig.undbm" title="pydsm.delsig.undbm"><code class="xref py py-obj docutils literal notranslate"><span class="pre">undbm</span></code></a>(x[, R])</p></td>
+<td><p>Converts argument from dBm power to rms voltage.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.delsig.rms.html#pydsm.delsig.rms" title="pydsm.delsig.rms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rms</span></code></a>(x[, no_dc])</p></td>
+<td><p>Compute root means square value (RMS) of a vector.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="graphing">
+<h3>Graphing<a class="headerlink" href="#graphing" title="Permalink to this headline">¶</a></h3>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.delsig.plotPZ.html#pydsm.delsig.plotPZ" title="pydsm.delsig.plotPZ"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plotPZ</span></code></a>(H[, color, markersize, showlist])</p></td>
+<td><p>Plots the poles and zeros of a transfer function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.delsig.axisLabels.html#pydsm.delsig.axisLabels" title="pydsm.delsig.axisLabels"><code class="xref py py-obj docutils literal notranslate"><span class="pre">axisLabels</span></code></a>(points, incr)</p></td>
+<td><p>Generate alphanumeric axis labels.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="plumbing">
+<h2>Plumbing<a class="headerlink" href="#plumbing" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.delsig.ds_synNTFobj1.html#pydsm.delsig.ds_synNTFobj1" title="pydsm.delsig.ds_synNTFobj1"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ds_synNTFobj1</span></code></a>(x, p, osr, f0)</p></td>
+<td><p>Objective function for synthesizeNTF.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.delsig.ds_f1f2.html#pydsm.delsig.ds_f1f2" title="pydsm.delsig.ds_f1f2"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ds_f1f2</span></code></a>([osr, f0, complex_flag])</p></td>
+<td><p>Lower and higher extremes of the signal band as normalized frequencies</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.delsig.ds_optzeros.html#pydsm.delsig.ds_optzeros" title="pydsm.delsig.ds_optzeros"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ds_optzeros</span></code></a>(n[, opt])</p></td>
+<td><p>Zeros which minimize the in-band noise of a delta-sigma modulator</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.delsig.dsclansNTF.html#pydsm.delsig.dsclansNTF" title="pydsm.delsig.dsclansNTF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dsclansNTF</span></code></a>(x, order, rmax, Hz)</p></td>
+<td><p>Convert CLANS parameters into an NTF in ZPK form</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.delsig.padl.html#pydsm.delsig.padl" title="pydsm.delsig.padl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">padl</span></code></a>(x, n[, val])</p></td>
+<td><p>Pad a matrix or a vector on the left.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.delsig.padr.html#pydsm.delsig.padr" title="pydsm.delsig.padr"><code class="xref py py-obj docutils literal notranslate"><span class="pre">padr</span></code></a>(x, n[, val])</p></td>
+<td><p>Pad a matrix or a vector x on the right.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.delsig.padt.html#pydsm.delsig.padt" title="pydsm.delsig.padt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">padt</span></code></a>(x, n[, val])</p></td>
+<td><p>Pad a matrix or a vector on the top.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.delsig.padb.html#pydsm.delsig.padb" title="pydsm.delsig.padb"><code class="xref py py-obj docutils literal notranslate"><span class="pre">padb</span></code></a>(x, n[, val])</p></td>
+<td><p>Pad a matrix or a vector on the bottom.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.delsig.evalTF.html#pydsm.delsig.evalTF" title="pydsm.delsig.evalTF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">evalTF</span></code></a>(tf, x)</p></td>
+<td><p>Evaluates a transfer function.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.delsig.evalRPoly.html#pydsm.delsig.evalRPoly" title="pydsm.delsig.evalRPoly"><code class="xref py py-obj docutils literal notranslate"><span class="pre">evalRPoly</span></code></a>(roots, x[, k])</p></td>
+<td><p>Compute the value of a polynomial that is given in terms of its roots.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="reference.html#main-modules">Main modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html#utility-modules">Utility modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html#error-handling">Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="reference.html" title="Reference guide"
+              >previous</a> |
+            <a href="generated/pydsm.delsig.synthesizeNTF.html" title="pydsm.delsig.synthesizeNTF"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

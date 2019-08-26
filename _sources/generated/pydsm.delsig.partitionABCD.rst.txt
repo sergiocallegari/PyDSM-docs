@@ -1,0 +1,6 @@
+pydsm.delsig.partitionABCD
+==========================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: partitionABCD

@@ -1,0 +1,6 @@
+pydsm.delsig.synthesizeNTF
+==========================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: synthesizeNTF

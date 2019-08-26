@@ -1,0 +1,6 @@
+pydsm.utilities.db
+==================
+
+.. currentmodule:: pydsm.utilities
+
+.. autofunction:: db

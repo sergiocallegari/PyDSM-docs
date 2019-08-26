@@ -1,0 +1,6 @@
+pydsm.iso226.iso226_spl_contour
+===============================
+
+.. currentmodule:: pydsm.iso226
+
+.. autofunction:: iso226_spl_contour

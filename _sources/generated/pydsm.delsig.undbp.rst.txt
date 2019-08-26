@@ -1,0 +1,6 @@
+pydsm.delsig.undbp
+==================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: undbp

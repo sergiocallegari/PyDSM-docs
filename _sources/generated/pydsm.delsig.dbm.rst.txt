@@ -1,0 +1,6 @@
+pydsm.delsig.dbm
+================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: dbm

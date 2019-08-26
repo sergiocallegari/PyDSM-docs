@@ -1,0 +1,6 @@
+pydsm.delsig.padr
+=================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: padr

@@ -1,0 +1,6 @@
+pydsm.delsig.ds_synNTFobj1
+==========================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: ds_synNTFobj1

@@ -1,0 +1,6 @@
+pydsm.simulation.simulateDSM
+============================
+
+.. currentmodule:: pydsm.simulation
+
+.. autofunction:: simulateDSM

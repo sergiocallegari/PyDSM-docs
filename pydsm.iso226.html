@@ -1,0 +1,211 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>ISO 226 loudness countours (pysdm.iso226) &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydsm.iso226.iso226_spl_contour" href="generated/pydsm.iso226.iso226_spl_contour.html" />
+    <link rel="prev" title="pydsm.audio_weightings.f_weighting" href="generated/pydsm.audio_weightings.f_weighting.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="generated/pydsm.audio_weightings.f_weighting.html" title="pydsm.audio_weightings.f_weighting"
+             accesskey="P">previous</a> |
+          <a href="generated/pydsm.iso226.iso226_spl_contour.html" title="pydsm.iso226.iso226_spl_contour"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="module-pydsm.iso226"></span><div class="section" id="iso-226-loudness-countours-pysdm-iso226">
+<h1>ISO 226 loudness countours (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pysdm.iso226</span></code>)<a class="headerlink" href="#iso-226-loudness-countours-pysdm-iso226" title="Permalink to this headline">¶</a></h1>
+<p>Loudness contours from ISO 226.</p>
+<p>Contours are returned both as tables of data and as contour functions</p>
+<div class="section" id="functions-returning-iso-226-contours">
+<h2>Functions returning ISO 226 contours<a class="headerlink" href="#functions-returning-iso-226-contours" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.iso226.iso226_spl_contour.html#pydsm.iso226.iso226_spl_contour" title="pydsm.iso226.iso226_spl_contour"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iso226_spl_contour</span></code></a>([L_N, hfe])</p></td>
+<td><p>Generates an equal loudness contour as described in ISO 226.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.iso226.iso226_spl_itpl.html#pydsm.iso226.iso226_spl_itpl" title="pydsm.iso226.iso226_spl_itpl"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iso226_spl_itpl</span></code></a>([L_N, hfe, k])</p></td>
+<td><p>Generates an interpolation of an equal loudness contour.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions-computing-loudness-acoustic-pressure">
+<h2>Functions computing loudness/acoustic pressure<a class="headerlink" href="#functions-computing-loudness-acoustic-pressure" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.iso226.tabled_L_p.html#pydsm.iso226.tabled_L_p" title="pydsm.iso226.tabled_L_p"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tabled_L_p</span></code></a>(L_N[, hfe])</p></td>
+<td><p>Table of sound pressure levels for given loudness in ISO 226.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.iso226.tabled_L_N.html#pydsm.iso226.tabled_L_N" title="pydsm.iso226.tabled_L_N"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tabled_L_N</span></code></a>(L_p[, hfe])</p></td>
+<td><p>Table of perceived loudness levels for given sound pressure in ISO 226.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="functions-returning-data-tabled-in-the-standard">
+<h2>Functions returning data tabled in the standard<a class="headerlink" href="#functions-returning-data-tabled-in-the-standard" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.iso226.tabled_f.html#pydsm.iso226.tabled_f" title="pydsm.iso226.tabled_f"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tabled_f</span></code></a>([hfe])</p></td>
+<td><p>Table of frequencies in ISO 226.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.iso226.tabled_alpha_f.html#pydsm.iso226.tabled_alpha_f" title="pydsm.iso226.tabled_alpha_f"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tabled_alpha_f</span></code></a>([hfe])</p></td>
+<td><p>Table of exponents for loudness perception in ISO 226.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.iso226.tabled_L_U.html#pydsm.iso226.tabled_L_U" title="pydsm.iso226.tabled_L_U"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tabled_L_U</span></code></a>([hfe])</p></td>
+<td><p>Table of magnitudes of the linear transfer function in ISO 226.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.iso226.tabled_T_f.html#pydsm.iso226.tabled_T_f" title="pydsm.iso226.tabled_T_f"><code class="xref py py-obj docutils literal notranslate"><span class="pre">tabled_T_f</span></code></a>([hfe])</p></td>
+<td><p>Table of thresholds of hearing in ISO 226.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
+<p>This module uses data from the latest revision of ISO 226 <a class="reference internal" href="#r0031815c876f-1" id="id1">[1]</a>.
+For reference, also consider <a class="reference internal" href="#r0031815c876f-2" id="id2">[2]</a>.</p>
+<p>The ISO standard provides the equal loudness contours as tabled data.
+Tables end at 12.5 kHz. Above this frequency equal-loudness-level data are
+relatively scarce and tend to be variable <a class="reference internal" href="#r0031815c876f-3" id="id3">[3]</a>. Yet, it is known
+that the human ear has a precipitous decline in sensitivity with increasing
+frequency above 15 kHz, to the point that at about 20 kHz the percieved sound
+becomes negligible (&gt; 100 dB attenuation) <a class="reference internal" href="#r0031815c876f-4" id="id4">[4]</a>. For this reason,
+this module includes the possibility of delivering some modified ISO contours
+where the tabled data is augmented by creating a new data point at 20 kHz
+where the behavior found at 20 Hz is replicated.</p>
+<dl class="citation">
+<dt class="label" id="r0031815c876f-1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>ISO 226:2003 “Acoustics - Normal equal-loudness-level contours”</p>
+</dd>
+<dt class="label" id="r0031815c876f-2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Jeff Tackett, “ISO 226 Equal-Loudness-Level Contour Signal,”
+2005
+(<a class="reference external" href="http://www.mathworks.com/matlabcentral/fileexchange/7028">http://www.mathworks.com/matlabcentral/fileexchange/7028</a>)</p>
+</dd>
+<dt class="label" id="r0031815c876f-3"><span class="brackets"><a class="fn-backref" href="#id3">3</a></span></dt>
+<dd><p>Yoiti Suzuki et al, “Precise and Full-range Determination of
+Two-dimensional Equal Loudness Contours,” 2003
+(<a class="reference external" href="http://www.nedo.go.jp/itd/grant-e/report/00pdf/is-01e.pdf">http://www.nedo.go.jp/itd/grant-e/report/00pdf/is-01e.pdf</a>)</p>
+</dd>
+<dt class="label" id="r0031815c876f-4"><span class="brackets"><a class="fn-backref" href="#id4">4</a></span></dt>
+<dd><p>Robert A. Wannamaker “Psychoacoustically Optimal Noise
+Shaping”, J. Audio Eng. Soc., Vol. 40, N. 7/8, 1992 July/August</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="reference.html#main-modules">Main modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html#utility-modules">Utility modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html#error-handling">Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="generated/pydsm.audio_weightings.f_weighting.html" title="pydsm.audio_weightings.f_weighting"
+              >previous</a> |
+            <a href="generated/pydsm.iso226.iso226_spl_contour.html" title="pydsm.iso226.iso226_spl_contour"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

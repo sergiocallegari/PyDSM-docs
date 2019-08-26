@@ -1,0 +1,6 @@
+pydsm.ft.idtft_hermitian
+========================
+
+.. currentmodule:: pydsm.ft
+
+.. autofunction:: idtft_hermitian

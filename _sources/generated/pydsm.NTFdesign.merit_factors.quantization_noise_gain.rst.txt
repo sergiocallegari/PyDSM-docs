@@ -1,0 +1,6 @@
+pydsm.NTFdesign.merit_factors.quantization_noise_gain
+=====================================================
+
+.. currentmodule:: pydsm.NTFdesign.merit_factors
+
+.. autofunction:: quantization_noise_gain

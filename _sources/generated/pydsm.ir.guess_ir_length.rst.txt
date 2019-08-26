@@ -1,0 +1,6 @@
+pydsm.ir.guess_ir_length
+========================
+
+.. currentmodule:: pydsm.ir
+
+.. autofunction:: guess_ir_length

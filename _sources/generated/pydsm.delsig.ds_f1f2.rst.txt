@@ -1,0 +1,6 @@
+pydsm.delsig.ds_f1f2
+====================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: ds_f1f2

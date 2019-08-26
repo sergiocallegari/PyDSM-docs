@@ -1,0 +1,6 @@
+pydsm.delsig.plotPZ
+===================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: plotPZ

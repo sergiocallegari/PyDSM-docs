@@ -1,0 +1,6 @@
+pydsm.delsig.clans
+==================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: clans

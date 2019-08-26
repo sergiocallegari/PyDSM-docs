@@ -1,0 +1,203 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Getting started guide for MacOs systems &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Reference guide" href="reference.html" />
+    <link rel="prev" title="Getting started guide for Windows systems" href="windows-getting-started.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="windows-getting-started.html" title="Getting started guide for Windows systems"
+             accesskey="P">previous</a> |
+          <a href="reference.html" title="Reference guide"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="getting-started-guide-for-macos-systems">
+<h1>Getting started guide for MacOs systems<a class="headerlink" href="#getting-started-guide-for-macos-systems" title="Permalink to this headline">¶</a></h1>
+<p>The installation of PyDSM involves two main steps. The installation of
+its prerequisites <a class="reference internal" href="getting-started.html"><span class="doc">pre-requisites</span></a> and the
+installation of PyDSM itself.</p>
+<div class="section" id="installation-of-the-prerequisites">
+<h2>Installation of the prerequisites<a class="headerlink" href="#installation-of-the-prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Installing the prerequisites with MacOs is quite easy since most of
+them are automatically provided by the platform.</p>
+<div class="section" id="installation-of-the-python-environment">
+<h3>Installation of the Python environment<a class="headerlink" href="#installation-of-the-python-environment" title="Permalink to this headline">¶</a></h3>
+<p>A Python 2.7 environment is ready available on all recent MacOS
+versions (from Lion on). Still, it is strongly recommended to install
+a stand alone Python distribution (such as <a class="reference external" href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>) to minimize the
+risk of interference with the system. The advantage of using a Python
+distribution is that it also provides most of the packages that PyDSM
+needs (e.g., Numpy, Scipy, Matplotlib, etc.). In case you do not want
+to use a Python distribution, you will first need to install a C
+compiler (see the next section) and then to install all the individual
+pre-requisites. The <code class="docutils literal notranslate"><span class="pre">pip</span></code> command can do it for you.</p>
+</div>
+<div class="section" id="installation-of-the-c-compiler">
+<h3>Installation of the C compiler<a class="headerlink" href="#installation-of-the-c-compiler" title="Permalink to this headline">¶</a></h3>
+<p>To make sure that your system includes a C compiler, you can install
+Xcode for the Mac App Store.</p>
+</div>
+</div>
+<div class="section" id="installation-of-pydsm-itself">
+<h2>Installation of PyDSM itself<a class="headerlink" href="#installation-of-pydsm-itself" title="Permalink to this headline">¶</a></h2>
+<p>After the Python environment and the C compiler are set up, you may
+eventually proceed to installing PyDSM itself. As of today, the
+package is available from the <a class="reference external" href="http://pypi.python.org/pypi">PyPi</a> repository, so that it is
+sufficient to issue the following command:</p>
+<blockquote>
+<div><p>pip install pydsm</p>
+</div></blockquote>
+<p>This downloads, unpacks and installs the package in a single step. In
+case there are pre-requisites that need to be satisfied, <code class="docutils literal notranslate"><span class="pre">pip</span></code> also
+tries to download and install them.  The <code class="docutils literal notranslate"><span class="pre">--user</span></code> option can be
+conveniently added to the command above to ensure a personal
+installation that does not require administrator permissions and does
+not interfere with the Linux distribution packaging system.</p>
+<p>As an alternative, you can manually download the package either from
+<a class="reference external" href="http://pypi.python.org/pypi">PyPi</a> (recommended) of from the <a class="reference external" href="https://code.google.com/p/pydsm/wiki/download?tm=2">PyDSM download site</a>. After the
+download, you need to expand the archive and launch the
+<code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>As before, you may want to provide the <code class="docutils literal notranslate"><span class="pre">--user</span></code> option to make a
+personal installation.</p>
+</div>
+<div class="section" id="testing-the-code">
+<h2>Testing the code<a class="headerlink" href="#testing-the-code" title="Permalink to this headline">¶</a></h2>
+<p>PyDSM includes a (rather incomplete for the moment) set of self tests.
+These can be run from the source tree by issuing the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">test</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">nosetests</span>
+</pre></div>
+</div>
+<p>Alternatively, once the package is installed, the tests can be run by
+opening a python interpreter and by typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pydsm</span>
+<span class="n">pydsm</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-the-code">
+<h2>Using the code<a class="headerlink" href="#using-the-code" title="Permalink to this headline">¶</a></h2>
+<p>To use PyDSM, open your Python interpreter (or the Spyder development
+environment) and</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pydsm</span>
+</pre></div>
+</div>
+<p>This command should not report any error. After issuing it, the PyDSM
+functions should be available under the <code class="docutils literal notranslate"><span class="pre">pydsm</span></code> namespace.</p>
+<p>Please, look at the PyDSM reference for further information on how to
+take advantage of the code. It may also be helpful to check the
+reference for information on the scientific papers that describe the
+methods implemented in the package.</p>
+<p>If you find this code useful, please consider citing such papers
+in your work.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="getting-started.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="linux-getting-started.html">Getting started guide for Linux systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="windows-getting-started.html">Getting started guide for Windows systems</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Getting started guide for MacOs systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="windows-getting-started.html" title="Getting started guide for Windows systems"
+              >previous</a> |
+            <a href="reference.html" title="Reference guide"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,6 @@
+pydsm.delsig.padl
+=================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: padl

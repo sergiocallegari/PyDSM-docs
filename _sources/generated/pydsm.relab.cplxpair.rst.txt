@@ -1,0 +1,6 @@
+pydsm.relab.cplxpair
+====================
+
+.. currentmodule:: pydsm.relab
+
+.. autofunction:: cplxpair

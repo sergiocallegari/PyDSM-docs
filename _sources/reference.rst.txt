@@ -1,0 +1,4 @@
+Reference guide
+===============
+
+.. automodule:: pydsm

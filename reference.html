@@ -1,0 +1,161 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Reference guide &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Code ported from the DELSIG toolbox by R. Schreier (pydsm.delsig)" href="pydsm.delsig.html" />
+    <link rel="prev" title="Getting started guide for MacOs systems" href="macos-getting-started.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="macos-getting-started.html" title="Getting started guide for MacOs systems"
+             accesskey="P">previous</a> |
+          <a href="pydsm.delsig.html" title="Code ported from the DELSIG toolbox by R. Schreier (pydsm.delsig)"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-pydsm">
+<span id="reference-guide"></span><h1>Reference guide<a class="headerlink" href="#module-pydsm" title="Permalink to this headline">¶</a></h1>
+<p>Copyright (c) 2012-2015, Sergio Callegari
+Some code ported from the <a class="reference external" href="http://www.mathworks.com/matlabcentral/fileexchange/19-delta-sigma-toolbox">DELSIG</a> toolbox, copyrighted by R. Schreier.</p>
+<p>The current codebase comprises both code that is specific to PyDSM and
+code ported from the <a class="reference external" href="http://www.mathworks.com/matlabcentral/fileexchange/19-delta-sigma-toolbox">DELSIG</a> Toolbox by R. Schreier. This is reflected
+in the module organization of PyDSM.</p>
+<p>Currently, the <a class="reference external" href="http://www.mathworks.com/matlabcentral/fileexchange/19-delta-sigma-toolbox">DELSIG</a> port is rather limited and just includes what is
+useful for comparison to the specific PyDSM algorithms.</p>
+<p>Right now, PyDSM is mostly specialized in the design of Noise Transfer
+Functions for Digital ΔΣ Modulators and in the simulation of the
+resulting modulators.</p>
+<div class="section" id="main-modules">
+<h2>Main modules<a class="headerlink" href="#main-modules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pydsm.delsig.html">Code ported from the DELSIG toolbox by R. Schreier (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.delsig</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydsm.NTFdesign.html">Synthesis of the NTF of Delta Sigma modulators (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.NTFdesign</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydsm.simulation.html">Simulation of Delta Sigma modulators (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.simulation</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydsm.audio_weightings.html">Acoustic weighting functions (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.audio_weightings</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydsm.iso226.html">ISO 226 loudness countours (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pysdm.iso226</span></code>)</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="utility-modules">
+<h2>Utility modules<a class="headerlink" href="#utility-modules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pydsm.correlations.html">Correlation utilities (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.correlations</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydsm.ft.html">Fourier transform related routines (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.ft</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydsm.ir.html">Computation of the impulse response of a DT filter (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.ir</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydsm.relab.html">Compatibility functions for PyDSM (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.relab</span></code>)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pydsm.utilities.html">Generic utility functions (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.utilities</span></code>)</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="error-handling">
+<h2>Error handling<a class="headerlink" href="#error-handling" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pydsm.exceptions.html">Exceptions and warnings (<code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.exceptions</span></code>)</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Reference guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#main-modules">Main modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#utility-modules">Utility modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#error-handling">Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="macos-getting-started.html" title="Getting started guide for MacOs systems"
+              >previous</a> |
+            <a href="pydsm.delsig.html" title="Code ported from the DELSIG toolbox by R. Schreier (pydsm.delsig)"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

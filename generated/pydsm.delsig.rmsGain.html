@@ -1,0 +1,167 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pydsm.delsig.rmsGain &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pydsm.delsig.dbv" href="pydsm.delsig.dbv.html" />
+    <link rel="prev" title="pydsm.delsig.partitionABCD" href="pydsm.delsig.partitionABCD.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="../index.html">
+            <img class="logo" src="../_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="pydsm.delsig.partitionABCD.html" title="pydsm.delsig.partitionABCD"
+             accesskey="P">previous</a> |
+          <a href="pydsm.delsig.dbv.html" title="pydsm.delsig.dbv"
+             accesskey="N">next</a> |
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pydsm-delsig-rmsgain">
+<h1>pydsm.delsig.rmsGain<a class="headerlink" href="#pydsm-delsig-rmsgain" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydsm.delsig.rmsGain">
+<code class="sig-prename descclassname">pydsm.delsig.</code><code class="sig-name descname">rmsGain</code><span class="sig-paren">(</span><em class="sig-param">H</em>, <em class="sig-param">f1</em>, <em class="sig-param">f2</em>, <em class="sig-param">N=100</em><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.delsig.rmsGain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the root-mean-square gain of a DT transfer function.</p>
+<p>The computation is practiced on an assigned frequency interval.
+By root-mean-square, it is meant that the magnitude response of the
+transfer function is squared and averaged over the band of interest.
+Then, the square root of this averaged value is returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>H</strong><span class="classifier">tuple</span></dt><dd><p>transfer function either in (z,p,k) or (n,d) form</p>
+</dd>
+<dt><strong>f1</strong><span class="classifier">real</span></dt><dd><p>lower bound of frequency band on which the transfer function
+is evaluated</p>
+</dd>
+<dt><strong>f2</strong><span class="classifier">real</span></dt><dd><p>upper bound of frequency band on which the transfer function
+is evaluated</p>
+</dd>
+<dt><strong>N</strong><span class="classifier">int, optional</span></dt><dd><p>number of points where the transfer function is evaluated in the
+interval. Defaults to 100.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>rms</strong><span class="classifier">real</span></dt><dd><p>rms value of the discrete time transfer function.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The discrete-time transer function H is evaluated in the frequency band
+(f1,f2).  Spanning of the bandwidth is linear. Frequencies are normalized
+in the [0, 0.5] interval.</p>
+<p>Warning: the result of the computation is normalized in the number of
+points used for the computation, but not on the frequency range.</p>
+<p>This computation could be practiced much more accurately and possibly
+faster, using algorithms for the numerical computation of integrals.</p>
+<p class="rubric">Examples</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">1024</span><span class="p">))</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pydsm</span><span class="o">.</span><span class="n">delsig</span><span class="o">.</span><span class="n">rms</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="go">0.70676142986866519</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference.html">Reference guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../reference.html#main-modules">Main modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference.html#utility-modules">Utility modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference.html#error-handling">Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="pydsm.delsig.partitionABCD.html" title="pydsm.delsig.partitionABCD"
+              >previous</a> |
+            <a href="pydsm.delsig.dbv.html" title="pydsm.delsig.dbv"
+              >next</a> |
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

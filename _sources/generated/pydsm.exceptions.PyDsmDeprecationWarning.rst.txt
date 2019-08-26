@@ -1,0 +1,6 @@
+pydsm.exceptions.PyDsmDeprecationWarning
+========================================
+
+.. currentmodule:: pydsm.exceptions
+
+.. autoexception:: PyDsmDeprecationWarning

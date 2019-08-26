@@ -1,0 +1,288 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Getting started guide for Windows systems &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting started guide for MacOs systems" href="macos-getting-started.html" />
+    <link rel="prev" title="Getting started guide for Linux systems" href="linux-getting-started.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="linux-getting-started.html" title="Getting started guide for Linux systems"
+             accesskey="P">previous</a> |
+          <a href="macos-getting-started.html" title="Getting started guide for MacOs systems"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="getting-started-guide-for-windows-systems">
+<h1>Getting started guide for Windows systems<a class="headerlink" href="#getting-started-guide-for-windows-systems" title="Permalink to this headline">¶</a></h1>
+<p>The installation of PyDSM involves two major steps: the installation
+of its <a class="reference internal" href="getting-started.html"><span class="doc">pre-requisites</span></a> and the installation of
+PyDSM itself.</p>
+<p>It is worth anticipating that building software from source in Windows
+is somehow less comfortable than on the other platforms where PyDSM is
+supported. For this reason <em>binary installers</em> may be available for
+Windows as a convenience. Due to limited resources, not all versions
+of PyDSM may ship a binary installer, though.  Binary installers make
+the installation simpler, since it is not necessary to have a C
+development environment. However, they may also create problems when
+application binary interfaces are mismatched.</p>
+<div class="section" id="installation-of-the-prerequisites">
+<h2>Installation of the prerequisites<a class="headerlink" href="#installation-of-the-prerequisites" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="steps-that-can-be-practiced-using-a-python-distribution">
+<h3>Steps that can be practiced using a Python distribution<a class="headerlink" href="#steps-that-can-be-practiced-using-a-python-distribution" title="Permalink to this headline">¶</a></h3>
+<p>First of all, note that rather than installing all the prerequisites
+one by one, it is convenient to install a Python distribution that
+automatically includes most of them. The recommendation is to use
+<a class="reference external" href="http://code.google.com/p/pythonxy/">Python(x,y)</a> or <a class="reference external" href="http://code.google.com/p/winpython/">WinPython</a> that are scientific Python
+distributions for Windows Vista/7/8. WinPython is also available in a
+flavor for 64 bit Windows.  They include Numpy, Scipy, Matplotlib,
+Cython, Spyder and, as of the most recent <a class="reference external" href="http://code.google.com/p/winpython/">WinPython</a> also
+CVXOPT. Obviously, it is also possible to use other Python
+distributions, or to install the prerequisites one by one, but with
+this you are on your own.</p>
+<p>Note that although Python(x,y) and WinPython include most of the
+prerequisites of PyDSM, they may not install all of them by
+default. Thus, during the setup of PyDSM make sure that all the PyDSM
+prerequisites that are available in the python distribution are also
+flagged for installation.</p>
+<p>Setting up a Python distribution such as Python(x,y) or WinPython is
+expected to take just a few minutes.</p>
+</div>
+<div class="section" id="steps-that-may-not-be-possible-with-a-python-distribution">
+<h3>Steps that may not be possible with a Python distribution<a class="headerlink" href="#steps-that-may-not-be-possible-with-a-python-distribution" title="Permalink to this headline">¶</a></h3>
+<p>It may be the case that the adopted python distribution misses some
+required packages. Actually, most of the packages required by PyDSM
+are quite common such as Numpy, Scipy, and Matplotlib and should
+definitely be available in any scientific oriented
+distribution. The only less common pre-requisite is <a class="reference external" href="http://abel.ee.ucla.edu/cvxopt/">CVXOPT</a>.</p>
+<p>In any case, if something is missing, it needs to be manually
+installed. Typically, this will not require any compilation, since
+there are distributions of pre-built python packages for Windows. A
+good starting point can be looking at (the <a class="reference external" href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">pythonlibs site by
+Christoph Gohlke</a>).  Remember to pick the installers that are correct
+for your environment (32 or 64 bit). Also, try avoid mixing packages
+from different sources, since when one deals with non-pure python
+packages (namely, when packages that take advantage of C or C++
+libraries), subtle incompatibilities may apper. For the same reason,
+assure that the Python distribution that you are using and the package
+installers are compatible with each other.</p>
+</div>
+<div class="section" id="a-word-of-caution">
+<h3>A word of caution<a class="headerlink" href="#a-word-of-caution" title="Permalink to this headline">¶</a></h3>
+<p>Currently, the state of affairs with respect to free Python
+distributions for Windows is not completely ideal.  A few
+distributions may now ship without <a class="reference external" href="http://abel.ee.ucla.edu/cvxopt/">CVXOPT</a> (notably <a class="reference external" href="http://code.google.com/p/winpython/">WinPython</a> has
+dropped this package at versions 2.7.6.3, 2.7.6.4 and got it again
+later). There have been reports of some instability with installing
+the <a class="reference external" href="http://abel.ee.ucla.edu/cvxopt/">CVXOPT</a> 1.1.7 package provided at the <a class="reference external" href="http://www.lfd.uci.edu/~gohlke/pythonlibs/">pythonlibs site by
+Christoph Gohlke</a> with some of these Python distributions.</p>
+<p>The suggestion is to use <em>recent</em> <a class="reference external" href="http://code.google.com/p/winpython/">WinPython</a> releases, such as
+2.7.9.2 (for Python 2) or 3.4.2.4 (for Python 3), or more recent, that
+are known to ship with a reliable <a class="reference external" href="http://abel.ee.ucla.edu/cvxopt/">CVXOPT</a>.</p>
+</div>
+</div>
+<div class="section" id="installation-of-pydsm-itself">
+<h2>Installation of PyDSM itself<a class="headerlink" href="#installation-of-pydsm-itself" title="Permalink to this headline">¶</a></h2>
+<p>After all the prerequisites above are satisfied, you may eventually
+proceed to installing PyDSM itself. Note that, differently from Linux,
+in Windows there is no dependency on an external CBlas library.</p>
+<p>Since version 0.7.0 an installer is available, simplifying the setup
+on Windows. Since version 0.9.1 the installer is also available for 64
+bit Windows. To use it, just download the pydsm <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file from
+<a class="reference external" href="http://pypi.python.org/pypi">Pypi</a> (recommended) or the <a class="reference external" href="https://code.google.com/p/pydsm/wiki/download?tm=2">PyDSM download site</a>, and run it (or drop
+it on your Python distribution <em>package manager</em> if you are using a
+Python distribution providing this facility).</p>
+</div>
+<div class="section" id="building-from-source">
+<h2>Building from source<a class="headerlink" href="#building-from-source" title="Permalink to this headline">¶</a></h2>
+<p>To build from source, you need a C compiler. Unfortunately, you may
+not need just a C compiler. In fact a <em>specific</em> C compiler may be
+required to avoid subtle inconsistencies in binary interfaces. The
+recommended compiler for working with Python 2.7 is <a class="reference external" href="http://go.microsoft.com/?linkid=7729279">Microsoft Visual
+C++ Express 2008</a>. This is the same compiler used to build the
+official Python 2.7 interpreter. You can get the compiler at no cost
+from Microsoft, using the previous link. Unfortunately, the 2008
+edition of Visual C++ Express does not contain any 64 bit compiler,
+that you need if you are working on a 64 bit edition of Windows and
+you deploy a 64 bit Python distribution. You will need to install the
+64 bit compiler separately. This is available with the <a class="reference external" href="http://www.microsoft.com/en-us/download/details.aspx?id=3138">Microsoft
+Windows SDK for Windows 7 and .NET Framework 3.5 SP1</a>.  Only very
+recently, Microsoft has started providing a <a class="reference external" href="http://www.microsoft.com/en-us/download/details.aspx?id=44266">Microsoft Visual C++
+Compiler for Python 2.7</a> which may contain all that is needed in a
+single package (but still there has not been any occasion to test it
+with PyDSM - your feedback is welcome). Very reassuringly Microsoft
+says “This compiler package is entirely unsupported”.</p>
+<p>Once you have a working C compiler, you can install PyDSM as simply as
+issuing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pydsm</span>
+</pre></div>
+</div>
+<p>In the above command, you may want to add the <code class="docutils literal notranslate"><span class="pre">--user</span></code> option to
+force a personal installation that does not require administrator
+privilege and has a lower risk of interfering with your platform
+Python installation.</p>
+<p>As an alternative, you can manually download the package either from
+<a class="reference external" href="http://pypi.python.org/pypi">PyPi</a> (recommended) of from the <a class="reference external" href="https://code.google.com/p/pydsm/wiki/download?tm=2">PyDSM download site</a>. After the
+download, you need to expand the archive and launch the
+<code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>As before, you may want to provide the <code class="docutils literal notranslate"><span class="pre">--user</span></code> option to make a
+personal installation.</p>
+<div class="section" id="so-why-cannot-i-build-all-my-pre-requisites-from-source">
+<h3>So why cannot I build all my pre-requisites from source?<a class="headerlink" href="#so-why-cannot-i-build-all-my-pre-requisites-from-source" title="Permalink to this headline">¶</a></h3>
+<p>If you have been patient enough to install the Visual C++ compiler,
+you may wonder why not installing all the PyDSM pre-requisites from
+source, including CVXOPT, in order to avoid any possible application
+binary interface inconsistency.</p>
+<p>The quick answer is <em>because you do not have a development version of
+the BLAS libraries</em>. These are matrix manipulation libraries that are
+at the basis of the numerical computations required by Numpy, CVXOPT
+and PyDSM. Unfortunately, a distribution of the BLAS libraries for
+Windows that is both free and easy to use does not exist. On one side
+you have very expensive packages such as the Intel Math Kernel
+Library.  On the other side you have free BLAS editions that are
+either very inefficient (e.g., the reference <a class="reference external" href="http://www.netlib.org">Netlib</a> implementation) or
+relatively efficient, but a pain to compile on Windows
+(e.g., <a class="reference external" href="http://math-atlas.sourceforge.net/">Atlas</a>). Possibly, the advent of <a class="reference external" href="http://www.openblas.net/">Openblas</a>, that provides
+pre-built binaries for windows may change the scenario in the future.</p>
+</div>
+</div>
+<div class="section" id="testing-the-code">
+<h2>Testing the code<a class="headerlink" href="#testing-the-code" title="Permalink to this headline">¶</a></h2>
+<p>PyDSM includes a (rather incomplete for the moment) set of self tests.
+Once the package is installed, the tests can be run by
+opening a python interpreter and by typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pydsm</span>
+<span class="n">pydsm</span><span class="o">.</span><span class="n">test</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Alternatively, when building from the source tree (see above), the
+tests can be run by issuing the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">test</span>
+</pre></div>
+</div>
+<p>or:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">nosetests</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="using-the-code">
+<h2>Using the code<a class="headerlink" href="#using-the-code" title="Permalink to this headline">¶</a></h2>
+<p>To use PyDSM, open your Python interpreter (or the Spyder development
+environment) and</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pydsm</span>
+</pre></div>
+</div>
+<p>This command should not report any error. After issuing it, the PyDSM
+functions should be available under the <code class="docutils literal notranslate"><span class="pre">pydsm</span></code> namespace.</p>
+<p>Please, look at the PyDSM reference for further information on how to
+take advantage of the code. It may also be helpful to check the
+reference for information on the scientific papers that describe the
+methods implemented in the package.</p>
+<p>If you find this code useful, please consider citing such papers
+in your work.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="getting-started.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="linux-getting-started.html">Getting started guide for Linux systems</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Getting started guide for Windows systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="macos-getting-started.html">Getting started guide for MacOs systems</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="linux-getting-started.html" title="Getting started guide for Linux systems"
+              >previous</a> |
+            <a href="macos-getting-started.html" title="Getting started guide for MacOs systems"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

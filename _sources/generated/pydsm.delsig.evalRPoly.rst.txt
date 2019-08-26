@@ -1,0 +1,6 @@
+pydsm.delsig.evalRPoly
+======================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: evalRPoly

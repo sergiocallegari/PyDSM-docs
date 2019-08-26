@@ -1,0 +1,230 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Synthesis of the NTF of Delta Sigma modulators (pydsm.NTFdesign) &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Delsig based NTF synthesis (pydsm.NTFdesign.delsig)" href="pydsm.NTFdesign.delsig.html" />
+    <link rel="prev" title="pydsm.delsig.evalRPoly" href="generated/pydsm.delsig.evalRPoly.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="generated/pydsm.delsig.evalRPoly.html" title="pydsm.delsig.evalRPoly"
+             accesskey="P">previous</a> |
+          <a href="pydsm.NTFdesign.delsig.html" title="Delsig based NTF synthesis (pydsm.NTFdesign.delsig)"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="module-pydsm.NTFdesign"></span><div class="section" id="synthesis-of-the-ntf-of-delta-sigma-modulators-pydsm-ntfdesign">
+<h1>Synthesis of the NTF of Delta Sigma modulators (<a class="reference internal" href="#module-pydsm.NTFdesign" title="pydsm.NTFdesign"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.NTFdesign</span></code></a>)<a class="headerlink" href="#synthesis-of-the-ntf-of-delta-sigma-modulators-pydsm-ntfdesign" title="Permalink to this headline">¶</a></h1>
+<p>This module provides some strategies for the design of the Noise
+Transfer Function of ΔΣ modulators. There are both functions that are
+specific to PyDSM and entry points to functions in the delsig module
+of PyDSM (<a class="reference internal" href="pydsm.delsig.html#module-pydsm.delsig" title="pydsm.delsig"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.delsig</span></code></a>).</p>
+<div class="section" id="key-functions">
+<h2>Key functions<a class="headerlink" href="#key-functions" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="pydsm.NTFdesign.ntf_schreier">
+<code class="sig-prename descclassname">pydsm.NTFdesign.</code><code class="sig-name descname">ntf_schreier</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.NTFdesign.ntf_schreier" title="Permalink to this definition">¶</a></dt>
+<dd><p>shorthand for <a class="reference internal" href="generated/pydsm.NTFdesign.delsig.ntf_schreier.html#pydsm.NTFdesign.delsig.ntf_schreier" title="pydsm.NTFdesign.delsig.ntf_schreier"><code class="xref py py-func docutils literal notranslate"><span class="pre">delsig.ntf_schreier()</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydsm.NTFdesign.ntf_chebyshev">
+<code class="sig-prename descclassname">pydsm.NTFdesign.</code><code class="sig-name descname">ntf_chebyshev</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.NTFdesign.ntf_chebyshev" title="Permalink to this definition">¶</a></dt>
+<dd><p>shorthand for <a class="reference internal" href="generated/pydsm.NTFdesign.delsig.ntf_chebyshev.html#pydsm.NTFdesign.delsig.ntf_chebyshev" title="pydsm.NTFdesign.delsig.ntf_chebyshev"><code class="xref py py-func docutils literal notranslate"><span class="pre">delsig.ntf_chebyshev()</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydsm.NTFdesign.ntf_clans">
+<code class="sig-prename descclassname">pydsm.NTFdesign.</code><code class="sig-name descname">ntf_clans</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.NTFdesign.ntf_clans" title="Permalink to this definition">¶</a></dt>
+<dd><p>shorthand for <a class="reference internal" href="generated/pydsm.NTFdesign.delsig.ntf_clans.html#pydsm.NTFdesign.delsig.ntf_clans" title="pydsm.NTFdesign.delsig.ntf_clans"><code class="xref py py-func docutils literal notranslate"><span class="pre">delsig.ntf_clans()</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydsm.NTFdesign.ntf_fir_weighting">
+<code class="sig-prename descclassname">pydsm.NTFdesign.</code><code class="sig-name descname">ntf_fir_weighting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.NTFdesign.ntf_fir_weighting" title="Permalink to this definition">¶</a></dt>
+<dd><p>shorthand for <a class="reference internal" href="generated/pydsm.NTFdesign.weighting.ntf_fir_weighting.html#pydsm.NTFdesign.weighting.ntf_fir_weighting" title="pydsm.NTFdesign.weighting.ntf_fir_weighting"><code class="xref py py-func docutils literal notranslate"><span class="pre">weighting.ntf_fir_weighting()</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydsm.NTFdesign.ntf_hybrid_weighting">
+<code class="sig-prename descclassname">pydsm.NTFdesign.</code><code class="sig-name descname">ntf_hybrid_weighting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.NTFdesign.ntf_hybrid_weighting" title="Permalink to this definition">¶</a></dt>
+<dd><p>shorthand for <a class="reference internal" href="generated/pydsm.NTFdesign.weighting.ntf_hybrid_weighting.html#pydsm.NTFdesign.weighting.ntf_hybrid_weighting" title="pydsm.NTFdesign.weighting.ntf_hybrid_weighting"><code class="xref py py-func docutils literal notranslate"><span class="pre">weighting.ntf_hybrid_weighting()</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydsm.NTFdesign.ntf_fir_minmax">
+<code class="sig-prename descclassname">pydsm.NTFdesign.</code><code class="sig-name descname">ntf_fir_minmax</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.NTFdesign.ntf_fir_minmax" title="Permalink to this definition">¶</a></dt>
+<dd><p>shorthand for <a class="reference internal" href="generated/pydsm.NTFdesign.minmax.ntf_fir_minmax.html#pydsm.NTFdesign.minmax.ntf_fir_minmax" title="pydsm.NTFdesign.minmax.ntf_fir_minmax"><code class="xref py py-func docutils literal notranslate"><span class="pre">minmax.ntf_fir_minmax()</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydsm.NTFdesign.ntf_dunn">
+<code class="sig-prename descclassname">pydsm.NTFdesign.</code><code class="sig-name descname">ntf_dunn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.NTFdesign.ntf_dunn" title="Permalink to this definition">¶</a></dt>
+<dd><p>shorthand for <a class="reference internal" href="generated/pydsm.NTFdesign.psychoacoustic.ntf_dunn.html#pydsm.NTFdesign.psychoacoustic.ntf_dunn" title="pydsm.NTFdesign.psychoacoustic.ntf_dunn"><code class="xref py py-func docutils literal notranslate"><span class="pre">psychoacoustic.ntf_dunn()</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydsm.NTFdesign.ntf_fir_audio_weighting">
+<code class="sig-prename descclassname">pydsm.NTFdesign.</code><code class="sig-name descname">ntf_fir_audio_weighting</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.NTFdesign.ntf_fir_audio_weighting" title="Permalink to this definition">¶</a></dt>
+<dd><p>shorthand for <a class="reference internal" href="generated/pydsm.NTFdesign.psychoacoustic.ntf_fir_audio_weighting.html#pydsm.NTFdesign.psychoacoustic.ntf_fir_audio_weighting" title="pydsm.NTFdesign.psychoacoustic.ntf_fir_audio_weighting"><code class="xref py py-func docutils literal notranslate"><span class="pre">psychoacoustic.ntf_fir_audio_weighting()</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydsm.NTFdesign.mult_weightings">
+<code class="sig-prename descclassname">pydsm.NTFdesign.</code><code class="sig-name descname">mult_weightings</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.NTFdesign.mult_weightings" title="Permalink to this definition">¶</a></dt>
+<dd><p>shorthand for <a class="reference internal" href="generated/pydsm.NTFdesign.weighting.mult_weightings.html#pydsm.NTFdesign.weighting.mult_weightings" title="pydsm.NTFdesign.weighting.mult_weightings"><code class="xref py py-func docutils literal notranslate"><span class="pre">weighting.mult_weightings()</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="pydsm.NTFdesign.quantization_noise_gain">
+<code class="sig-prename descclassname">pydsm.NTFdesign.</code><code class="sig-name descname">quantization_noise_gain</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.NTFdesign.quantization_noise_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>shorthand for <a class="reference internal" href="generated/pydsm.NTFdesign.merit_factors.quantization_noise_gain.html#pydsm.NTFdesign.merit_factors.quantization_noise_gain" title="pydsm.NTFdesign.merit_factors.quantization_noise_gain"><code class="xref py py-func docutils literal notranslate"><span class="pre">merit_factors.quantization_noise_gain()</span></code></a></p>
+</dd></dl>
+
+<dl class="function">
+<dt>
+<code class="sig-prename descclassname">pydsm.NTFdesign.</code><code class="sig-name descname">ntf_fir_minmax</code><span class="sig-paren">(</span><span class="sig-paren">)</span></dt>
+<dd><p>shorthand for <a class="reference internal" href="generated/pydsm.NTFdesign.minmax.ntf_fir_minmax.html#pydsm.NTFdesign.minmax.ntf_fir_minmax" title="pydsm.NTFdesign.minmax.ntf_fir_minmax"><code class="xref py py-func docutils literal notranslate"><span class="pre">minmax.ntf_fir_minmax()</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference internal" href="pydsm.NTFdesign.delsig.html#module-pydsm.NTFdesign.delsig" title="pydsm.NTFdesign.delsig"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.NTFdesign.delsig</span></code></a></dt><dd><p>NTF synthesis functions equivalent to those in <a class="reference internal" href="pydsm.delsig.html#module-pydsm.delsig" title="pydsm.delsig"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.delsig</span></code></a>.</p>
+</dd>
+<dt><a class="reference internal" href="pydsm.NTFdesign.weighting.html#module-pydsm.NTFdesign.weighting" title="pydsm.NTFdesign.weighting"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.NTFdesign.weighting</span></code></a></dt><dd><p>NTF synthesis techniques that take as their input either a weighting
+function (indicating the cost of quantization noise power versus frequency)
+or a specification of the filter in charge of removing the quantization
+noise.</p>
+</dd>
+<dt><a class="reference internal" href="pydsm.NTFdesign.minmax.html#module-pydsm.NTFdesign.minmax" title="pydsm.NTFdesign.minmax"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.NTFdesign.minmax</span></code></a></dt><dd><p>NTF synthesis techniques based on a minmax approach.</p>
+</dd>
+<dt><a class="reference internal" href="pydsm.NTFdesign.psychoacoustic.html#module-pydsm.NTFdesign.psychoacoustic" title="pydsm.NTFdesign.psychoacoustic"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.NTFdesign.psychoacoustic</span></code></a></dt><dd><p>NTF synthesis techniques for audio modulators that result in a noise shaping
+that take into account psychoacoustics.</p>
+</dd>
+<dt><a class="reference internal" href="pydsm.NTFdesign.merit_factors.html#module-pydsm.NTFdesign.merit_factors" title="pydsm.NTFdesign.merit_factors"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.NTFdesign.merit_factors</span></code></a></dt><dd><p>Functions for determining merit factors about NTFs.</p>
+</dd>
+<dt><a class="reference internal" href="pydsm.NTFdesign.helpers.html#module-pydsm.NTFdesign.helpers" title="pydsm.NTFdesign.helpers"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.NTFdesign.helpers</span></code></a></dt><dd><p>Helper functions</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="legacy-submodule">
+<h2>Legacy submodule<a class="headerlink" href="#legacy-submodule" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference internal" href="pydsm.NTFdesign.legacy.html#module-pydsm.NTFdesign.legacy" title="pydsm.NTFdesign.legacy"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.NTFdesign.legacy</span></code></a></dt><dd><p>Functions that are now superseded but that are worth keeping around for
+reproducing published results</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="deprecated-submodules">
+<h2>Deprecated submodules<a class="headerlink" href="#deprecated-submodules" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt><a class="reference internal" href="pydsm.NTFdesign.filter_based.html#module-pydsm.NTFdesign.filter_based" title="pydsm.NTFdesign.filter_based"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.NTFdesign.filter_based</span></code></a></dt><dd><p>Alternate entry points for some functions.</p>
+</dd>
+</dl>
+</div>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="reference.html">Reference guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="reference.html#main-modules">Main modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html#utility-modules">Utility modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reference.html#error-handling">Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="generated/pydsm.delsig.evalRPoly.html" title="pydsm.delsig.evalRPoly"
+              >previous</a> |
+            <a href="pydsm.NTFdesign.delsig.html" title="Delsig based NTF synthesis (pydsm.NTFdesign.delsig)"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

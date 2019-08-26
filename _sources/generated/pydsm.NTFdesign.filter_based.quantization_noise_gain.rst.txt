@@ -1,0 +1,6 @@
+pydsm.NTFdesign.filter_based.quantization_noise_gain
+====================================================
+
+.. currentmodule:: pydsm.NTFdesign.filter_based
+
+.. autofunction:: quantization_noise_gain

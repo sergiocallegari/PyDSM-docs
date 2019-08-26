@@ -1,0 +1,148 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pydsm.NTFdesign.legacy.quantization_noise_gain_by_conv &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Output filter based NTF synthesis (pydsm.NTFDesign.filter_based)" href="../pydsm.NTFdesign.filter_based.html" />
+    <link rel="prev" title="pydsm.NTFdesign.legacy.q0_from_filter_ir" href="pydsm.NTFdesign.legacy.q0_from_filter_ir.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="../index.html">
+            <img class="logo" src="../_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="pydsm.NTFdesign.legacy.q0_from_filter_ir.html" title="pydsm.NTFdesign.legacy.q0_from_filter_ir"
+             accesskey="P">previous</a> |
+          <a href="../pydsm.NTFdesign.filter_based.html" title="Output filter based NTF synthesis (pydsm.NTFDesign.filter_based)"
+             accesskey="N">next</a> |
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pydsm-ntfdesign-legacy-quantization-noise-gain-by-conv">
+<h1>pydsm.NTFdesign.legacy.quantization_noise_gain_by_conv<a class="headerlink" href="#pydsm-ntfdesign-legacy-quantization-noise-gain-by-conv" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydsm.NTFdesign.legacy.quantization_noise_gain_by_conv">
+<code class="sig-prename descclassname">pydsm.NTFdesign.legacy.</code><code class="sig-name descname">quantization_noise_gain_by_conv</code><span class="sig-paren">(</span><em class="sig-param">NTF</em>, <em class="sig-param">H</em>, <em class="sig-param">H_type='zpk'</em>, <em class="sig-param">db=80</em><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.NTFdesign.legacy.quantization_noise_gain_by_conv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Legacy version of <code class="xref py py-func docutils literal notranslate"><span class="pre">NTFDesign.quantization_noise_gain()</span></code></p>
+<p>Computes the quantization noise power gain, based on a convolution</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>NTF</strong><span class="classifier">tuple</span></dt><dd><p>NTF definition in zpk or nd form</p>
+</dd>
+<dt><strong>H</strong><span class="classifier">tuple or array_like</span></dt><dd><p>output filter definition in zpk or nd form if H_type=’zpk’ or ‘ba’
+(in this case, H is a tuple with 3 or 2 entries);
+output filter impulse response if H_type=’imp’ (in this case, H is an
+array)</p>
+</dd>
+<dt><strong>H_type</strong><span class="classifier">str</span></dt><dd><p>type of specification for parameter H. One of: ‘zpk’, ‘ba’, or
+‘imp’</p>
+</dd>
+<dt><strong>db</strong><span class="classifier">real</span></dt><dd><p>a precision hint for the computation of impulse responses</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>a</strong><span class="classifier">real</span></dt><dd><p>noise power gain</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The computation is practiced as the sum of the squared entries
+in the impulse response of the cascaded filter NTF*H</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="pydsm.NTFdesign.legacy.q0_from_filter_ir.html" title="pydsm.NTFdesign.legacy.q0_from_filter_ir"
+              >previous</a> |
+            <a href="../pydsm.NTFdesign.filter_based.html" title="Output filter based NTF synthesis (pydsm.NTFDesign.filter_based)"
+              >next</a> |
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

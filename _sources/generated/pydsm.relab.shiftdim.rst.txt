@@ -1,0 +1,6 @@
+pydsm.relab.shiftdim
+====================
+
+.. currentmodule:: pydsm.relab
+
+.. autofunction:: shiftdim

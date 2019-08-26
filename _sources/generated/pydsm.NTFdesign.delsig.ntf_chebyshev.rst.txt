@@ -1,0 +1,6 @@
+pydsm.NTFdesign.delsig.ntf_chebyshev
+====================================
+
+.. currentmodule:: pydsm.NTFdesign.delsig
+
+.. autofunction:: ntf_chebyshev

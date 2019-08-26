@@ -1,0 +1,169 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pydsm.NTFdesign.psychoacoustic.ntf_dunn &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pydsm.NTFdesign.psychoacoustic.ntf_fir_audio_weighting" href="pydsm.NTFdesign.psychoacoustic.ntf_fir_audio_weighting.html" />
+    <link rel="prev" title="pydsm.NTFdesign.psychoacoustic.dunn_optzeros_cplx" href="pydsm.NTFdesign.psychoacoustic.dunn_optzeros_cplx.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="../index.html">
+            <img class="logo" src="../_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="pydsm.NTFdesign.psychoacoustic.dunn_optzeros_cplx.html" title="pydsm.NTFdesign.psychoacoustic.dunn_optzeros_cplx"
+             accesskey="P">previous</a> |
+          <a href="pydsm.NTFdesign.psychoacoustic.ntf_fir_audio_weighting.html" title="pydsm.NTFdesign.psychoacoustic.ntf_fir_audio_weighting"
+             accesskey="N">next</a> |
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pydsm-ntfdesign-psychoacoustic-ntf-dunn">
+<h1>pydsm.NTFdesign.psychoacoustic.ntf_dunn<a class="headerlink" href="#pydsm-ntfdesign-psychoacoustic-ntf-dunn" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydsm.NTFdesign.psychoacoustic.ntf_dunn">
+<code class="sig-prename descclassname">pydsm.NTFdesign.psychoacoustic.</code><code class="sig-name descname">ntf_dunn</code><span class="sig-paren">(</span><em class="sig-param">order=3</em>, <em class="sig-param">osr=64</em>, <em class="sig-param">H_inf=1.5</em><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.NTFdesign.psychoacoustic.ntf_dunn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synthesizes an NTF for a DS audio modulator by Dunn’s approach.</p>
+<p>The signal bandwidth is 22.05 kHz.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>order</strong><span class="classifier">int, optional</span></dt><dd><p>the order of the modulator, defaults to 3</p>
+</dd>
+<dt><strong>osr</strong><span class="classifier">float, optional</span></dt><dd><p>the oversamping ratio (based on the actual signal bandwidth)</p>
+</dd>
+<dt><strong>H_inf</strong><span class="classifier">real, optional</span></dt><dd><p>max allowed peak value of the NTF. Defaults to 1.5</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>ntf</strong><span class="classifier">tuple</span></dt><dd><p>noise transfer function in zpk form.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Warns</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>As in DELSIG’s synthesizeNTF</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="pydsm.delsig.synthesizeNTF.html#pydsm.delsig.synthesizeNTF" title="pydsm.delsig.synthesizeNTF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pydsm.delsig.synthesizeNTF</span></code></a></dt><dd><p>DELSIG’s optimal NTF design strategy.</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>This is not exactly Dunn’s method (but it should be equivalent or
+slightly better). In fact, to avoid re-implementing the pole selection
+algorithm, that in <a class="reference internal" href="#rc01f7d75bb0f-1" id="id1">[1]</a> is based on a Butterworth synthesis, here
+the pole selection logic used in DELSIG’s synthesizeNTF is recycled.
+This should not make a big difference since DELSIG logic is anyway based
+on a pole positioning aimed at obtaining a maximally flat response of the
+NTF denominator in the signal band. This has the advantage of
+automatically controlling the peak gain of the NTF, as in the Lee
+criterion.</p>
+<p>Parameter H_inf is used to enforce the Lee stability criterion.</p>
+<dl class="citation">
+<dt class="label" id="rc01f7d75bb0f-1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Chris Dunn and Mark Sandler, “Psychoacoustically Optimal
+Sigma Delta Modulation,” J. Audio Eng. Soc., Vol. 45, No. 4, pp.
+212 - 223 (1997 April)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="pydsm.NTFdesign.psychoacoustic.dunn_optzeros_cplx.html" title="pydsm.NTFdesign.psychoacoustic.dunn_optzeros_cplx"
+              >previous</a> |
+            <a href="pydsm.NTFdesign.psychoacoustic.ntf_fir_audio_weighting.html" title="pydsm.NTFdesign.psychoacoustic.ntf_fir_audio_weighting"
+              >next</a> |
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

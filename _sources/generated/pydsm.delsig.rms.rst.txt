@@ -1,0 +1,6 @@
+pydsm.delsig.rms
+================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: rms

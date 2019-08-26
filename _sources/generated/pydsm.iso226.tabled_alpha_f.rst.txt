@@ -1,0 +1,6 @@
+pydsm.iso226.tabled_alpha_f
+===========================
+
+.. currentmodule:: pydsm.iso226
+
+.. autofunction:: tabled_alpha_f

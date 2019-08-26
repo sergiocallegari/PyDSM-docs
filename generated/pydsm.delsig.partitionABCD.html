@@ -1,0 +1,147 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pydsm.delsig.partitionABCD &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pydsm.delsig.rmsGain" href="pydsm.delsig.rmsGain.html" />
+    <link rel="prev" title="pydsm.delsig.simulateDSM" href="pydsm.delsig.simulateDSM.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="../index.html">
+            <img class="logo" src="../_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="pydsm.delsig.simulateDSM.html" title="pydsm.delsig.simulateDSM"
+             accesskey="P">previous</a> |
+          <a href="pydsm.delsig.rmsGain.html" title="pydsm.delsig.rmsGain"
+             accesskey="N">next</a> |
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pydsm-delsig-partitionabcd">
+<h1>pydsm.delsig.partitionABCD<a class="headerlink" href="#pydsm-delsig-partitionabcd" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydsm.delsig.partitionABCD">
+<code class="sig-prename descclassname">pydsm.delsig.</code><code class="sig-name descname">partitionABCD</code><span class="sig-paren">(</span><em class="sig-param">ABCD</em>, <em class="sig-param">m=None</em><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.delsig.partitionABCD" title="Permalink to this definition">¶</a></dt>
+<dd><p>Partition ABCD ss description in A, B, C, D for an m-input sytem</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>ABCD</strong><span class="classifier">matrix like 2D</span></dt><dd><p>input ABCD matrix providing the state space representation</p>
+</dd>
+<dt><strong>m</strong><span class="classifier">int or None, optional</span></dt><dd><p>number of inputs of state space system. If set to None, a guess
+is made from the ABCD matrix size (defaults to None).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>(A, B, C, D)</strong><span class="classifier">tuple of 2D ndarrays</span></dt><dd><p>the individual matrices composing ABCD</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>When the number of inputs is automatically guessed, the minimum
+acceptable value is take, considering the the system must have at least
+an input and an output.</p>
+<p>If ABCD is an ndarray, then its content is not copied in A, B, C, D.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference.html">Reference guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../reference.html#main-modules">Main modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference.html#utility-modules">Utility modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference.html#error-handling">Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="pydsm.delsig.simulateDSM.html" title="pydsm.delsig.simulateDSM"
+              >previous</a> |
+            <a href="pydsm.delsig.rmsGain.html" title="pydsm.delsig.rmsGain"
+              >next</a> |
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

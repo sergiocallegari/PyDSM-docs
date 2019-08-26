@@ -1,0 +1,6 @@
+pydsm.NTFdesign.weighting.q0_from_noise_weighting
+=================================================
+
+.. currentmodule:: pydsm.NTFdesign.weighting
+
+.. autofunction:: q0_from_noise_weighting

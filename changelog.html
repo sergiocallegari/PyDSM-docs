@@ -1,0 +1,260 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Changelog &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="References not provided inline in this manual" href="more-references.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="more-references.html" title="References not provided inline in this manual"
+             accesskey="P">previous</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<dl class="simple">
+<dt>0.14.0.0</dt><dd><ul class="simple">
+<li><p>Fix compatibility with cvxpy 1.0.x</p></li>
+<li><p>Fix compatibilit with PICOS 1.2.0</p></li>
+<li><p>Fix compatibility with matplotlib 3</p></li>
+<li><p>Fix compatibility with sphinx 2.2.0 (html docs only)</p></li>
+<li><p>Minor bugfixes</p></li>
+</ul>
+</dd>
+<dt>0.13.0.1</dt><dd><ul class="simple">
+<li><p>Fix compatibility with most recent cvxpy</p></li>
+<li><p>Minor bugfixes</p></li>
+</ul>
+</dd>
+<dt>0.13.0.0</dt><dd><ul class="simple">
+<li><p>Python 3 compatibility!</p></li>
+<li><p>Bugfixes</p></li>
+</ul>
+</dd>
+<dt>0.12.0.1</dt><dd><ul class="simple">
+<li><p>Fix crashes due to incorrect management of parameters in deprecated
+functions</p></li>
+</ul>
+</dd>
+<dt>0.12.0.0</dt><dd><ul class="simple">
+<li><p>Switch to new version numbering scheme also in view of
+PEP 440</p></li>
+<li><p>Install as zipped package</p></li>
+<li><p>Modify management of optional parameters in some functions.
+Note that this implies a minor API breakage.</p></li>
+<li><p>Implement new hybrid NTF design method</p></li>
+<li><p>Slightly improve accuracy of weighted NTF design functions</p></li>
+<li><p>Improve quantization_noise_gain function</p></li>
+<li><p>Improve html documentation</p></li>
+<li><p>Let multiple modelers be selected in functions using convex
+optimization (cvxpy, cvxpy_old and picos are supported)</p></li>
+<li><p>Implement some more functions in delsig module (axisLabels, rms)</p></li>
+<li><p>Many small fixes</p></li>
+</ul>
+</dd>
+<dt>0.11.0</dt><dd><ul class="simple">
+<li><p>Switch to setuptools for building</p></li>
+<li><p>Improve testing framework</p></li>
+<li><p>Better management of optional parameters in some functions</p></li>
+<li><p>API cleanups
+(a best effort has been put in retaining back-compatibility. Some
+back compatibility functions are deprecated and will be removed)</p></li>
+<li><p>Code style improvements</p></li>
+</ul>
+</dd>
+<dt>0.10.1</dt><dd><ul class="simple">
+<li><p>Fix setup script for compatibility with MacOs</p></li>
+<li><p>Provide getting started guide for MacOs</p></li>
+<li><p>Minor fixes in documentation</p></li>
+</ul>
+</dd>
+<dt>0.10.0</dt><dd><ul class="simple">
+<li><p>Ready setup script for distribution</p></li>
+<li><p>Implement <code class="docutils literal notranslate"><span class="pre">partitionABCD</span></code> in delsig module</p></li>
+<li><p>Make delsig module PEP8 compliant</p></li>
+<li><p>Some minor improvements to utility functions</p></li>
+</ul>
+</dd>
+<dt>0.9.1</dt><dd><ul class="simple">
+<li><p>Apply some fixes to the modulator simulator</p></li>
+<li><p>Make building for 64 bit windows possible</p></li>
+<li><p>Implement <code class="docutils literal notranslate"><span class="pre">clans</span></code> NTF design method</p></li>
+<li><p>Implement <code class="docutils literal notranslate"><span class="pre">minmax</span></code> NTF design method
+(only single band LP, so far)</p></li>
+</ul>
+</dd>
+<dt>0.9.0</dt><dd><ul class="simple">
+<li><p>Include a local version of the discontinued cvxpy package
+by Tomas Tinoco de Ribera. This is a temporary measure</p></li>
+</ul>
+</dd>
+<dt>0.8.3</dt><dd><ul class="simple">
+<li><p>Fix a typo in the fast DSM simulator
+(only affecting case where modulator structure is passed in ABCD form)</p></li>
+<li><p>Add example from ICECS 2013 paper</p></li>
+<li><p>Enhance <code class="docutils literal notranslate"><span class="pre">quantization_weighted_noise_gain</span></code> function</p></li>
+</ul>
+</dd>
+<dt>0.8.2</dt><dd><ul class="simple">
+<li><p>Fix some licensing issues</p></li>
+</ul>
+</dd>
+<dt>0.8.1</dt><dd><ul class="simple">
+<li><p>Prevent synthesizeNTF failure if there are no zeros to optimize</p></li>
+<li><p>Improve some docstrings</p></li>
+<li><p>Remove some spurious imports</p></li>
+<li><p>Fix normalization in quantization_noise_gain functions</p></li>
+</ul>
+</dd>
+<dt>0.8.0</dt><dd><ul class="simple">
+<li><p>Add NTF design method based on a noise weighting function</p></li>
+<li><p>Provide a new module with standard audio weighting functions</p></li>
+<li><p>Provide a new module with ISO 226 equal loudness contours</p></li>
+<li><p>Provide a new module with NTF design methods for psychoacoustically
+optimal modulators for audio signals</p></li>
+<li><p>Fix a regression in <code class="docutils literal notranslate"><span class="pre">ds_optzeros</span></code> introduced with version 0.7.3
+and preventing some example code from running</p></li>
+<li><p>Add new examples from a recently published TCAS-II paper</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">'ba'</span></code> specifier for requiring filters in numerator/denominator form</p></li>
+<li><p>Make <code class="docutils literal notranslate"><span class="pre">evalTF</span></code> function more robust against complex overflow</p></li>
+<li><p>Bug fixes</p></li>
+</ul>
+</dd>
+<dt>0.7.3</dt><dd><ul class="simple">
+<li><p>Apply fixes introduced in DELSIG 7.4</p></li>
+<li><p>Make port of DELSIG functions more consistent with DELSIG</p></li>
+<li><p>Provide better documentation to some functions</p></li>
+<li><p>Bug fixes</p></li>
+</ul>
+</dd>
+<dt>0.7.2</dt><dd><ul class="simple">
+<li><p>Make codebase compatible with scipy 0.12.0</p></li>
+<li><p>Make delsig module contain its reference delsig version</p></li>
+<li><p>Minor fixes to the documentation</p></li>
+</ul>
+</dd>
+<dt>0.7.1</dt><dd><ul class="simple">
+<li><p>Fix computation of impulse response of filters that are already in
+FIR form.</p></li>
+<li><p>Avoid direct access to numpy array data in Cython code. This is in
+preparation for future releases of numpy where direct access to
+array data is already deprecated.</p></li>
+<li><p>Implement the synthesizeChebyshevNTF NTF design strategy from DELSIG.</p></li>
+</ul>
+</dd>
+<dt>0.7.0</dt><dd><ul class="simple">
+<li><p>Dropped dependency on ATLAS on Windows. Now using the blas functions
+made available via scipy. The linux version still uses ATLAS that has
+a little performance advantage.</p></li>
+<li><p>Much simpler installation on Windows</p></li>
+<li><p>API changes: renamed <code class="docutils literal notranslate"><span class="pre">synthezize_ntf_from_filter_ir</span></code> into
+<code class="docutils literal notranslate"><span class="pre">synthezize_ntf_from_filter_imp</span></code>; swapped param order in
+<code class="docutils literal notranslate"><span class="pre">q0_from_filter_imp_response</span></code>.</p></li>
+<li><p>Fixed passing of options to <code class="docutils literal notranslate"><span class="pre">synthesize_ntf_from_q0</span></code> and
+<code class="docutils literal notranslate"><span class="pre">synthesize_ntf_from_filter_imp</span></code></p></li>
+</ul>
+</dd>
+<dt>0.6.1</dt><dd><ul class="simple">
+<li><p>Add project logo to the project source</p></li>
+<li><p>Ship html documentation separately from main code</p></li>
+<li><p>Add sample code to replicate the results in an ICECS 2012 paper</p></li>
+</ul>
+</dd>
+<dt>0.6.0</dt><dd><p>First released version</p>
+</dd>
+</dl>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="more-references.html" title="References not provided inline in this manual"
+              >previous</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

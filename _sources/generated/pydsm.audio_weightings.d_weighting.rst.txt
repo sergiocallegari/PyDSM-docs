@@ -1,0 +1,6 @@
+pydsm.audio_weightings.d_weighting
+==================================
+
+.. currentmodule:: pydsm.audio_weightings
+
+.. autofunction:: d_weighting

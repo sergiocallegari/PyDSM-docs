@@ -1,0 +1,6 @@
+pydsm.utilities.digested_options
+================================
+
+.. currentmodule:: pydsm.utilities
+
+.. autofunction:: digested_options

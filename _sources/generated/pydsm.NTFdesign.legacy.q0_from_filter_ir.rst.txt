@@ -1,0 +1,6 @@
+pydsm.NTFdesign.legacy.q0_from_filter_ir
+========================================
+
+.. currentmodule:: pydsm.NTFdesign.legacy
+
+.. autofunction:: q0_from_filter_ir

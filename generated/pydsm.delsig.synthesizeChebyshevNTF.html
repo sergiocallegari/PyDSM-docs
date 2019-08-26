@@ -1,0 +1,165 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pydsm.delsig.synthesizeChebyshevNTF &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pydsm.delsig.simulateDSM" href="pydsm.delsig.simulateDSM.html" />
+    <link rel="prev" title="pydsm.delsig.clans" href="pydsm.delsig.clans.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="../index.html">
+            <img class="logo" src="../_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="pydsm.delsig.clans.html" title="pydsm.delsig.clans"
+             accesskey="P">previous</a> |
+          <a href="pydsm.delsig.simulateDSM.html" title="pydsm.delsig.simulateDSM"
+             accesskey="N">next</a> |
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pydsm-delsig-synthesizechebyshevntf">
+<h1>pydsm.delsig.synthesizeChebyshevNTF<a class="headerlink" href="#pydsm-delsig-synthesizechebyshevntf" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydsm.delsig.synthesizeChebyshevNTF">
+<code class="sig-prename descclassname">pydsm.delsig.</code><code class="sig-name descname">synthesizeChebyshevNTF</code><span class="sig-paren">(</span><em class="sig-param">order=3</em>, <em class="sig-param">osr=64</em>, <em class="sig-param">opt=0</em>, <em class="sig-param">H_inf=1.5</em>, <em class="sig-param">f0=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.delsig.synthesizeChebyshevNTF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synthesize the NTF for a DS modulator by a Chebyshev function.</p>
+<p>This function is an alternative to synthesizeNTF which assumes
+that the magnitude of the denominator of the NTF is approximately constant
+in the passband. When the OSR or H_inf are low, this assumption breaks
+down and synthesizeNTF yields a non-optimal NTF. The synthesizeChebyshevNTF
+creates non-optimal NTFs, but fares better than synthesizeNTF in the
+aforementioned circumstances. The NTF is obtained from a type-2 highpass
+Chebyshev function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>order</strong><span class="classifier">int, optional</span></dt><dd><p>the order of the modulator, defaults to 3</p>
+</dd>
+<dt><strong>osr</strong><span class="classifier">float, optional</span></dt><dd><p>the oversamping ratio (based on the actual signal bandwidth)</p>
+</dd>
+<dt><strong>opt</strong><span class="classifier">int, optional</span></dt><dd><p>ignored, present for signature compatibility with synthesizeNTF</p>
+</dd>
+<dt><strong>H_inf</strong><span class="classifier">real, optional</span></dt><dd><p>max allowed peak value of the NTF. Defaults to 1.5</p>
+</dd>
+<dt><strong>f0</strong><span class="classifier">real, optional</span></dt><dd><p>center frequency, defaults to 0.
+1 corresponds to the sampling frequency, so that 0.5 is the
+maximum value. Value 0 specifies an LP modulator.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>ntf</strong><span class="classifier">tuple</span></dt><dd><p>noise transfer function in zpk form.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><dl class="simple">
+<dt>ValueError</dt><dd><p>‘Order must be even for a bandpass modulator.’ if the order is
+incompatible with the modulator type.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Parameter opt is ignored.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference.html">Reference guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../reference.html#main-modules">Main modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference.html#utility-modules">Utility modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference.html#error-handling">Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="pydsm.delsig.clans.html" title="pydsm.delsig.clans"
+              >previous</a> |
+            <a href="pydsm.delsig.simulateDSM.html" title="pydsm.delsig.simulateDSM"
+              >next</a> |
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

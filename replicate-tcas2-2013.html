@@ -1,0 +1,234 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>TCAS-II 2013 paper by Callegari and Bizzarri &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="TCAS-I 2013 paper by Callegari and Bizzarri" href="replicate-tcas1-2013.html" />
+    <link rel="prev" title="ICECS 2013 paper by Callegari" href="replicate-icecs-2013.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="replicate-icecs-2013.html" title="ICECS 2013 paper by Callegari"
+             accesskey="P">previous</a> |
+          <a href="replicate-tcas1-2013.html" title="TCAS-I 2013 paper by Callegari and Bizzarri"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tcas-ii-2013-paper-by-callegari-and-bizzarri">
+<h1>TCAS-II 2013 paper by Callegari and Bizzarri<a class="headerlink" href="#tcas-ii-2013-paper-by-callegari-and-bizzarri" title="Permalink to this headline">¶</a></h1>
+<p>This section illustrates how to replicate the results presented in the
+paper <a class="reference internal" href="#cal13b" id="id1"><span>[Cal13b]</span></a></p>
+<dl class="citation">
+<dt class="label" id="cal13b"><span class="brackets"><a class="fn-backref" href="#id1">Cal13b</a></span></dt>
+<dd><p>Sergio Callegari, Federico Bizzarri <em>“Noise Weighting in the
+Design of ΔΣ Modulators (with a Psychoacoustic Coder as an
+Example),”</em> IEEE Transactions on Circuits and Systems - Part II:
+Express Briefs, Vol. 60, N. 11, pp. 756-760. Nov. 2013. DOI:
+<a class="reference external" href="http://dx.doi.org/10.1109/TCSII.2013.2281892">10.1109/TCSII.2013.2281892</a>. Pre-print
+available on <a class="reference external" href="http://arxiv.org/abs/1309.6151">arXiv</a>.</p>
+</dd>
+</dl>
+<p>To this aim, some sample code is provided in the directory
+<code class="docutils literal notranslate"><span class="pre">Examples/TCAS2-2013</span></code>.</p>
+<p>The research paper provides 4 examples, in Sections IV-a to V-e.</p>
+<div class="section" id="example-in-section-iv-a">
+<h2>Example in section IV-a<a class="headerlink" href="#example-in-section-iv-a" title="Permalink to this headline">¶</a></h2>
+<p>This example refers to the design of a Digital ΔΣ modulator for low
+pass signals with a mere specification of the signal bandwith (which
+is specified as a fraction of the modulator sample frequency via the
+oversampling ratio).</p>
+<p>The corresponding code is provided in the file <code class="docutils literal notranslate"><span class="pre">demo_lp_brickwall.py</span></code>. Once
+PyDSM and all its pre-requisites are installed, this can be started
+directly by opening a shell (command prompt) and typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">demo_lp_brickwall</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Alternatively, the script can be opened in Spyder and launched from
+there.</p>
+<p>The code runs, showing some intermediate output from the
+optimizer. Then it provides the graphical output that is delivered in
+Figure 2 in the TCAS-II paper.</p>
+<p>The proposed example code is not particularly elegant, but should be
+rather easy to read, also thanks to the many comments.</p>
+</div>
+<div class="section" id="example-in-section-iv-b">
+<h2>Example in section IV-b<a class="headerlink" href="#example-in-section-iv-b" title="Permalink to this headline">¶</a></h2>
+<p>This example refers to the design of a multiband Digital ΔΣ modulator.</p>
+<p>The corresponding code is provided in the file
+<code class="docutils literal notranslate"><span class="pre">demo_multiband_brickwall.py</span></code>. Once PyDSM and all its pre-requisites
+are installed, this can be started directly by opening a shell
+(command prompt) and typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">demo_multiband_brickwall</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Alternatively, the script can be opened in Spyder and launched from
+there.</p>
+<p>The code runs, showing some intermediate output from the
+optimizer. Then it provides the graphical output that is delivered in
+Figure 3 in the TCAS-II paper.</p>
+<p>The proposed example code is not particularly
+elegant, but should be rather easy to read, also thanks to the many
+comments.</p>
+</div>
+<div class="section" id="example-in-section-iv-c">
+<h2>Example in section IV-c<a class="headerlink" href="#example-in-section-iv-c" title="Permalink to this headline">¶</a></h2>
+<p>This example refers to the design of a Digital ΔΣ modulator that is
+followed by a non ideal filter in charge of removing the quantization
+noise.</p>
+<p>The corresponding code is provided in the file
+<code class="docutils literal notranslate"><span class="pre">demo_lp_filter.py</span></code>. Once PyDSM and all its pre-requisites are
+installed, this can be started directly by opening a shell (command
+prompt) and typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">demo_lp_filter</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Alternatively, the script can be opened in Spyder and launched from
+there.</p>
+<p>The code runs, showing some intermediate output from the
+optimizer. Then it provides the graphical output that is delivered in
+Figure 5 in the TCAS-II paper.</p>
+<p>The proposed example code is not particularly elegant, but should be
+rather easy to read, also thanks to the many comments.</p>
+</div>
+<div class="section" id="example-in-section-iv-d">
+<h2>Example in section IV-d<a class="headerlink" href="#example-in-section-iv-d" title="Permalink to this headline">¶</a></h2>
+<p>This example refers to the design of a Digital ΔΣ modulator for low-pass
+signal that is capable of delivering a reduced quantization noise close to
+dc.</p>
+<p>The corresponding code is provided in the file
+<code class="docutils literal notranslate"><span class="pre">demo_lp_low_dc_noise.py</span></code>. Once PyDSM and all its pre-requisites are
+installed, this can be started directly by opening a shell (command
+prompt) and typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">demo_lp_low_dc_noise</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Alternatively, the script can be opened in Spyder and launched from
+there.</p>
+<p>The code runs, showing some intermediate output from the
+optimizer. Then it provides the graphical output that is delivered in
+Figure 6 in the TCAS-II paper.</p>
+<p>The proposed example code is not particularly elegant, but should be
+rather easy to read, also thanks to the many comments.</p>
+</div>
+<div class="section" id="example-in-section-iv-e">
+<h2>Example in section IV-e<a class="headerlink" href="#example-in-section-iv-e" title="Permalink to this headline">¶</a></h2>
+<p>This example refers to the design of a Digital ΔΣ modulator for audio
+signals capable of shaping the in-band quantization noise according to
+a psychoacoustic weighting function, so that it is minimally audible.</p>
+<p>The corresponding code is provided in the file
+<code class="docutils literal notranslate"><span class="pre">demo_psychoacoustic.py</span></code>. Once PyDSM and all its pre-requisites are
+installed, this can be started directly by opening a shell (command
+prompt) and typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">demo_psychoacoustic</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Alternatively, the script can be opened in Spyder and launched from
+there.</p>
+<p>The code runs, showing some intermediate output from the
+optimizer. Then it provides the graphical output that is delivered in
+Figure 7 in the TCAS-II paper.</p>
+<p>The proposed example code is not particularly elegant, but should be
+rather easy to read, also thanks to the many comments.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="replicate-results.html">How to replicate the results in some recent scientific papers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="replicate-icecs-2013.html">ICECS 2013 paper by Callegari</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">TCAS-II 2013 paper by Callegari and Bizzarri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="replicate-tcas1-2013.html">TCAS-I 2013 paper by Callegari and Bizzarri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="replicate-icecs-2012.html">ICECS 2012 paper by Callegari and Bizzarri</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="replicate-icecs-2013.html" title="ICECS 2013 paper by Callegari"
+              >previous</a> |
+            <a href="replicate-tcas1-2013.html" title="TCAS-I 2013 paper by Callegari and Bizzarri"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

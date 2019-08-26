@@ -1,0 +1,153 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pydsm.iso226.iso226_spl_itpl &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pydsm.iso226.tabled_L_p" href="pydsm.iso226.tabled_L_p.html" />
+    <link rel="prev" title="pydsm.iso226.iso226_spl_contour" href="pydsm.iso226.iso226_spl_contour.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="../index.html">
+            <img class="logo" src="../_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="pydsm.iso226.iso226_spl_contour.html" title="pydsm.iso226.iso226_spl_contour"
+             accesskey="P">previous</a> |
+          <a href="pydsm.iso226.tabled_L_p.html" title="pydsm.iso226.tabled_L_p"
+             accesskey="N">next</a> |
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pydsm-iso226-iso226-spl-itpl">
+<h1>pydsm.iso226.iso226_spl_itpl<a class="headerlink" href="#pydsm-iso226-iso226-spl-itpl" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydsm.iso226.iso226_spl_itpl">
+<code class="sig-prename descclassname">pydsm.iso226.</code><code class="sig-name descname">iso226_spl_itpl</code><span class="sig-paren">(</span><em class="sig-param">L_N=40</em>, <em class="sig-param">hfe=False</em>, <em class="sig-param">k=3</em><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.iso226.iso226_spl_itpl" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates an interpolation of an equal loudness contour.</p>
+<p>This function returns an interpolation object describing the equal
+loudness contour for the input phon level, according to ISO 226 sect 4.1.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>L_N</strong><span class="classifier">float, optional</span></dt><dd><p>perceived loudness level in phons.</p>
+</dd>
+<dt><strong>hfe</strong><span class="classifier">bool</span></dt><dd><p>whether the table should be augmented with a data point
+at 20 kHz (High-Frequency-Enhanced table)</p>
+</dd>
+<dt><strong>k</strong><span class="classifier">int</span></dt><dd><p>interpolation order</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>itpl</strong><span class="classifier">univariate interpolation object</span></dt><dd><p>function-like object that takes a frequency f as its input and returns
+the equivalent sound pressure level at f</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>1 phon is 1 dB_SPL (sound pressure level) at 1 kHz. Sound pressure levels
+are measured in dBs by referring to a reference pressure level P0 (close
+to the hearing threshold at 1 kHz and set to 20 uPa RMS).</p>
+<p>The valid input phon range is 0-90 dB_SPL. Above 80 dB, only the
+frequency range 20-4000 Hz is significant.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference.html">Reference guide</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../reference.html#main-modules">Main modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference.html#utility-modules">Utility modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference.html#error-handling">Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="pydsm.iso226.iso226_spl_contour.html" title="pydsm.iso226.iso226_spl_contour"
+              >previous</a> |
+            <a href="pydsm.iso226.tabled_L_p.html" title="pydsm.iso226.tabled_L_p"
+              >next</a> |
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

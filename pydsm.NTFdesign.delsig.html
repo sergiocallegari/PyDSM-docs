@@ -1,0 +1,158 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Delsig based NTF synthesis (pydsm.NTFdesign.delsig) &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pydsm.NTFdesign.delsig.ntf_schreier" href="generated/pydsm.NTFdesign.delsig.ntf_schreier.html" />
+    <link rel="prev" title="Synthesis of the NTF of Delta Sigma modulators (pydsm.NTFdesign)" href="pydsm.NTFdesign.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="pydsm.NTFdesign.html" title="Synthesis of the NTF of Delta Sigma modulators (pydsm.NTFdesign)"
+             accesskey="P">previous</a> |
+          <a href="generated/pydsm.NTFdesign.delsig.ntf_schreier.html" title="pydsm.NTFdesign.delsig.ntf_schreier"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="module-pydsm.NTFdesign.delsig"></span><div class="section" id="delsig-based-ntf-synthesis-pydsm-ntfdesign-delsig">
+<h1>Delsig based NTF synthesis (<a class="reference internal" href="#module-pydsm.NTFdesign.delsig" title="pydsm.NTFdesign.delsig"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.NTFdesign.delsig</span></code></a>)<a class="headerlink" href="#delsig-based-ntf-synthesis-pydsm-ntfdesign-delsig" title="Permalink to this headline">¶</a></h1>
+<p>This modules provides code for the synthesis of the modulator NTF, based
+on the routines in the DELSIG toolkit by R. Schreier.</p>
+<p>These routines are also available in the <a class="reference internal" href="pydsm.delsig.html#module-pydsm.delsig" title="pydsm.delsig"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pydsm.delsig</span></code></a> and get
+abbreviated names here.</p>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.NTFdesign.delsig.ntf_schreier.html#pydsm.NTFdesign.delsig.ntf_schreier" title="pydsm.NTFdesign.delsig.ntf_schreier"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ntf_schreier</span></code></a>([order, osr, opt, H_inf, f0])</p></td>
+<td><p>Synthesizes an NTF for a DS modulator by Schreier’s approach.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.NTFdesign.delsig.ntf_chebyshev.html#pydsm.NTFdesign.delsig.ntf_chebyshev" title="pydsm.NTFdesign.delsig.ntf_chebyshev"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ntf_chebyshev</span></code></a>([order, osr, opt, H_inf, f0])</p></td>
+<td><p>Synthesize the NTF for a DS modulator by a Chebyshev function.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.NTFdesign.delsig.ntf_clans.html#pydsm.NTFdesign.delsig.ntf_clans" title="pydsm.NTFdesign.delsig.ntf_clans"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ntf_clans</span></code></a>([order, osr, nq, rmax, opt])</p></td>
+<td><p>Synthesize the NTF for a ΔΣM w/ multibit quantizer by the CLANS method.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="deprecated-functions">
+<h2>Deprecated functions<a class="headerlink" href="#deprecated-functions" title="Permalink to this headline">¶</a></h2>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.NTFdesign.delsig.synthesizeNTF.html#pydsm.NTFdesign.delsig.synthesizeNTF" title="pydsm.NTFdesign.delsig.synthesizeNTF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">synthesizeNTF</span></code></a>([order, osr, opt, H_inf, f0])</p></td>
+<td><p>Alias of <a class="reference internal" href="generated/pydsm.NTFdesign.delsig.ntf_schreier.html#pydsm.NTFdesign.delsig.ntf_schreier" title="pydsm.NTFdesign.delsig.ntf_schreier"><code class="xref py py-func docutils literal notranslate"><span class="pre">ntf_schreier()</span></code></a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/pydsm.NTFdesign.delsig.synthesizeChebyshevNTF.html#pydsm.NTFdesign.delsig.synthesizeChebyshevNTF" title="pydsm.NTFdesign.delsig.synthesizeChebyshevNTF"><code class="xref py py-obj docutils literal notranslate"><span class="pre">synthesizeChebyshevNTF</span></code></a>([order, osr, opt, …])</p></td>
+<td><p>Alias of <a class="reference internal" href="generated/pydsm.NTFdesign.delsig.ntf_chebyshev.html#pydsm.NTFdesign.delsig.ntf_chebyshev" title="pydsm.NTFdesign.delsig.ntf_chebyshev"><code class="xref py py-func docutils literal notranslate"><span class="pre">ntf_chebyshev()</span></code></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/pydsm.NTFdesign.delsig.clans.html#pydsm.NTFdesign.delsig.clans" title="pydsm.NTFdesign.delsig.clans"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clans</span></code></a>([order, osr, nq, rmax, opt])</p></td>
+<td><p>Alias of <a class="reference internal" href="generated/pydsm.NTFdesign.delsig.ntf_clans.html#pydsm.NTFdesign.delsig.ntf_clans" title="pydsm.NTFdesign.delsig.ntf_clans"><code class="xref py py-func docutils literal notranslate"><span class="pre">ntf_clans()</span></code></a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="pydsm.NTFdesign.html" title="Synthesis of the NTF of Delta Sigma modulators (pydsm.NTFdesign)"
+              >previous</a> |
+            <a href="generated/pydsm.NTFdesign.delsig.ntf_schreier.html" title="pydsm.NTFdesign.delsig.ntf_schreier"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

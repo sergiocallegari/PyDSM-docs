@@ -1,0 +1,6 @@
+pydsm.ft.idtft
+==============
+
+.. currentmodule:: pydsm.ft
+
+.. autofunction:: idtft

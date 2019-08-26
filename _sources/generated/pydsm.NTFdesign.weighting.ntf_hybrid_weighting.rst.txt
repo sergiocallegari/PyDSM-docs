@@ -1,0 +1,6 @@
+pydsm.NTFdesign.weighting.ntf_hybrid_weighting
+==============================================
+
+.. currentmodule:: pydsm.NTFdesign.weighting
+
+.. autofunction:: ntf_hybrid_weighting

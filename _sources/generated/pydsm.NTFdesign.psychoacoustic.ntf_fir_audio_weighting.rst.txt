@@ -1,0 +1,6 @@
+pydsm.NTFdesign.psychoacoustic.ntf_fir_audio_weighting
+======================================================
+
+.. currentmodule:: pydsm.NTFdesign.psychoacoustic
+
+.. autofunction:: ntf_fir_audio_weighting

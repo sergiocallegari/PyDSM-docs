@@ -1,0 +1,6 @@
+pydsm.exceptions.PyDsmSlowPathWarning
+=====================================
+
+.. currentmodule:: pydsm.exceptions
+
+.. autoexception:: PyDsmSlowPathWarning

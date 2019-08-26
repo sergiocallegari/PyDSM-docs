@@ -1,0 +1,6 @@
+pydsm.simulation.ds_quantize
+============================
+
+.. currentmodule:: pydsm.simulation
+
+.. autofunction:: ds_quantize

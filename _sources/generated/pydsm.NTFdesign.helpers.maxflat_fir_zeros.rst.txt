@@ -1,0 +1,6 @@
+pydsm.NTFdesign.helpers.maxflat_fir_zeros
+=========================================
+
+.. currentmodule:: pydsm.NTFdesign.helpers
+
+.. autofunction:: maxflat_fir_zeros

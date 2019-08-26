@@ -1,0 +1,6 @@
+pydsm.delsig.padt
+=================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: padt

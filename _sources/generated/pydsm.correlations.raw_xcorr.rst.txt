@@ -1,0 +1,6 @@
+pydsm.correlations.raw_xcorr
+============================
+
+.. currentmodule:: pydsm.correlations
+
+.. autofunction:: raw_xcorr

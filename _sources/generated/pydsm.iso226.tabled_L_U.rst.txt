@@ -1,0 +1,6 @@
+pydsm.iso226.tabled_L_U
+=======================
+
+.. currentmodule:: pydsm.iso226
+
+.. autofunction:: tabled_L_U

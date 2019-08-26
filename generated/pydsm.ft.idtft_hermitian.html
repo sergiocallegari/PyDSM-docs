@@ -1,0 +1,165 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pydsm.ft.idtft_hermitian &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Computation of the impulse response of a DT filter (pydsm.ir)" href="../pydsm.ir.html" />
+    <link rel="prev" title="pydsm.ft.idtft" href="pydsm.ft.idtft.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="../index.html">
+            <img class="logo" src="../_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="pydsm.ft.idtft.html" title="pydsm.ft.idtft"
+             accesskey="P">previous</a> |
+          <a href="../pydsm.ir.html" title="Computation of the impulse response of a DT filter (pydsm.ir)"
+             accesskey="N">next</a> |
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pydsm-ft-idtft-hermitian">
+<h1>pydsm.ft.idtft_hermitian<a class="headerlink" href="#pydsm-ft-idtft-hermitian" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydsm.ft.idtft_hermitian">
+<code class="sig-prename descclassname">pydsm.ft.</code><code class="sig-name descname">idtft_hermitian</code><span class="sig-paren">(</span><em class="sig-param">Ff</em>, <em class="sig-param">tt</em>, <em class="sig-param">fs=1</em>, <em class="sig-param">**options</em><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.ft.idtft_hermitian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the inverse discrete time Fourier transform (IDTFT) for a
+hermitian function of frequency.</p>
+<p>Since the input function is hermitian, i.e. F(-f)=conjugate(F(f)), it
+is sufficient to look at a single side of it. Furthermore, the IDTFT
+turns out to be a real vector.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>Ff</strong><span class="classifier">callable</span></dt><dd><p>the function of frequency to compute the IDTFT from. The values for
+a negative argument are not used.</p>
+</dd>
+<dt><strong>tt</strong><span class="classifier">real or array_like</span></dt><dd><p>the time sample (or 1-D vector of) where to compute the IDTFT</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>x</strong><span class="classifier">ndarray</span></dt><dd><p>the inverse discrete time Fourier transform at time values in tt</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>fs</strong><span class="classifier">real, optional</span></dt><dd><p>the sample frequency for the output sequence (defaults to 1)</p>
+</dd>
+<dt><strong>quad_opts</strong><span class="classifier">dictionary</span></dt><dd><p>Parameters to be passed to the <code class="docutils literal notranslate"><span class="pre">quad</span></code> function used internally as
+an integrator. Allowed options are <code class="docutils literal notranslate"><span class="pre">epsabs</span></code>, <code class="docutils literal notranslate"><span class="pre">epsrel</span></code>, <code class="docutils literal notranslate"><span class="pre">limit</span></code>,
+<code class="docutils literal notranslate"><span class="pre">points</span></code>. Do not use other options since they could break the
+integrator in unexpected ways. Defaults can be set by changing the
+function <code class="docutils literal notranslate"><span class="pre">default_options</span></code> attribute.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.integrate.quad</span></code></dt><dd><p>integrator used internally. For the meaning of the integrator parameters.</p>
+</dd>
+</dl>
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../reference.html">Reference guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../reference.html#main-modules">Main modules</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../reference.html#utility-modules">Utility modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../reference.html#error-handling">Error handling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="pydsm.ft.idtft.html" title="pydsm.ft.idtft"
+              >previous</a> |
+            <a href="../pydsm.ir.html" title="Computation of the impulse response of a DT filter (pydsm.ir)"
+              >next</a> |
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

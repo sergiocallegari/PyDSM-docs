@@ -1,0 +1,134 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Code included in PyDSM &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="References not provided inline in this manual" href="more-references.html" />
+    <link rel="prev" title="License" href="license.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="license.html" title="License"
+             accesskey="P">previous</a> |
+          <a href="more-references.html" title="References not provided inline in this manual"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="code-included-in-pydsm">
+<span id="included-code"></span><h1>Code included in PyDSM<a class="headerlink" href="#code-included-in-pydsm" title="Permalink to this headline">¶</a></h1>
+<p>Versions 0.9.x of PyDSM include the <code class="docutils literal notranslate"><span class="pre">cvxpy</span></code> package by Tomas Tinoco de
+Rubira.</p>
+<p>This is a discontinued library for modeling convex optimization
+problems in Python. It has been superseeded by another library by
+Steven Diamond, Eric Chu and Stephen Boyd that carries the same name,
+but has a different API.</p>
+<p>Since PyDSM was developed on the API of the former <code class="docutils literal notranslate"><span class="pre">cvxpy</span></code>, in order
+to support functionality the former <code class="docutils literal notranslate"><span class="pre">cvxpy</span></code> package is distributed
+inside PyDSM as a temporary solution. In the long term, PyDSM will move
+to use the newer <code class="docutils literal notranslate"><span class="pre">cvxpy</span></code> by Steven Diamond.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">cvxpy</span></code> library provided with PyDSM was originally distributed
+under the GPL3 license by its original author. See the source files
+for further information. The PyDSM distribution installs it outside of
+the <code class="docutils literal notranslate"><span class="pre">pydsm</span></code> package as <code class="docutils literal notranslate"><span class="pre">cvxpy_tinoco</span></code> in order to avoid name
+conflicts with the newer <code class="docutils literal notranslate"><span class="pre">cvxpy</span></code>.</p>
+<p>The version shipped is the latest available from the original author
+plus patches by Sergio Callegari and others. Some of these patches fix
+minor errors with the code. A substantial set of patches is used to make
+all the internal imports of the library relative, in order to make the
+library relocatable to a new name.</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="license.html" title="License"
+              >previous</a> |
+            <a href="more-references.html" title="References not provided inline in this manual"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

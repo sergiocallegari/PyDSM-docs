@@ -1,0 +1,6 @@
+pydsm.delsig.evalTF
+===================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: evalTF

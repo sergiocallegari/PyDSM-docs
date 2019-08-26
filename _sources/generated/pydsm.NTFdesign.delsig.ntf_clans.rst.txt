@@ -1,0 +1,6 @@
+pydsm.NTFdesign.delsig.ntf_clans
+================================
+
+.. currentmodule:: pydsm.NTFdesign.delsig
+
+.. autofunction:: ntf_clans

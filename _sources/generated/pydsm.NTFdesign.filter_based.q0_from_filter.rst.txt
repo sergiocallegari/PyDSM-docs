@@ -1,0 +1,6 @@
+pydsm.NTFdesign.filter_based.q0_from_filter
+===========================================
+
+.. currentmodule:: pydsm.NTFdesign.filter_based
+
+.. autofunction:: q0_from_filter

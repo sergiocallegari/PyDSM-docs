@@ -1,0 +1,6 @@
+pydsm.delsig.rmsGain
+====================
+
+.. currentmodule:: pydsm.delsig
+
+.. autofunction:: rmsGain

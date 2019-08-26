@@ -1,0 +1,6 @@
+pydsm.NTFdesign.filter_based.synthesize_ntf_from_filter
+=======================================================
+
+.. currentmodule:: pydsm.NTFdesign.filter_based
+
+.. autofunction:: synthesize_ntf_from_filter

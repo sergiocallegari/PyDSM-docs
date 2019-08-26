@@ -1,0 +1,192 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pydsm.NTFdesign.delsig.ntf_clans &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="pydsm.NTFdesign.delsig.synthesizeNTF" href="pydsm.NTFdesign.delsig.synthesizeNTF.html" />
+    <link rel="prev" title="pydsm.NTFdesign.delsig.ntf_chebyshev" href="pydsm.NTFdesign.delsig.ntf_chebyshev.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="../index.html">
+            <img class="logo" src="../_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="pydsm.NTFdesign.delsig.ntf_chebyshev.html" title="pydsm.NTFdesign.delsig.ntf_chebyshev"
+             accesskey="P">previous</a> |
+          <a href="pydsm.NTFdesign.delsig.synthesizeNTF.html" title="pydsm.NTFdesign.delsig.synthesizeNTF"
+             accesskey="N">next</a> |
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pydsm-ntfdesign-delsig-ntf-clans">
+<h1>pydsm.NTFdesign.delsig.ntf_clans<a class="headerlink" href="#pydsm-ntfdesign-delsig-ntf-clans" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydsm.NTFdesign.delsig.ntf_clans">
+<code class="sig-prename descclassname">pydsm.NTFdesign.delsig.</code><code class="sig-name descname">ntf_clans</code><span class="sig-paren">(</span><em class="sig-param">order=4</em>, <em class="sig-param">osr=64</em>, <em class="sig-param">nq=5</em>, <em class="sig-param">rmax=0.95</em>, <em class="sig-param">opt=0</em>, <em class="sig-param">**options</em><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.NTFdesign.delsig.ntf_clans" title="Permalink to this definition">¶</a></dt>
+<dd><p>Synthesize the NTF for a ΔΣM w/ multibit quantizer by the CLANS method.</p>
+<p>This function is based on the CLANS method (Closed-Loop Analysis of Noise
+Shaping Coders) by J. G. Kenney and L. R. Carley, described in
+‘Design of Multibit Noise Shaping Data Converters’
+Analog Integrated Circuits and Signal Processing Vol. 3 pp 259-272 (1993).</p>
+<p>The method is only suitable for low pass modulators.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>order</strong><span class="classifier">int, optional</span></dt><dd><p>the order of the modulator, defaults to 4</p>
+</dd>
+<dt><strong>osr</strong><span class="classifier">float, optional</span></dt><dd><p>the oversamping ratio (based on the actual signal bandwidth).
+Defaults to 64</p>
+</dd>
+<dt><strong>nq</strong><span class="classifier">int, optional</span></dt><dd><p>the number of quantization levels, defaults to 5</p>
+</dd>
+<dt><strong>rmax</strong><span class="classifier">real, optional</span></dt><dd><p>the maximum radius of the NTF poles</p>
+</dd>
+<dt><strong>opt</strong><span class="classifier">int, optional</span></dt><dd><p>opt parameter passed to <code class="docutils literal notranslate"><span class="pre">synthesizeNTF</span></code> which is used to compute the
+NTF zero location and the initial pole location for the optimizer</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>ntf</strong><span class="classifier">tuple</span></dt><dd><p>noise transfer function in zpk form.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>show_progress</strong><span class="classifier">bool, optional</span></dt><dd><p>provide extended output, default is False and can be updated by
+changing the function <code class="docutils literal notranslate"><span class="pre">default_options</span></code> attribute.</p>
+</dd>
+<dt><strong>slsqp_opts</strong><span class="classifier">dictionary, optional</span></dt><dd><p>Parameters passed to the <code class="docutils literal notranslate"><span class="pre">fmin_slsqp</span></code> optimizer. Allowed options are:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">maxiters</span></code></dt><dd><p>Maximum number of iterations (defaults to 100)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">ftol</span></code></dt><dd><p>Precision goal for the value of f in the stopping criterion
+(defaults to 1e-6)</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">eps</span></code></dt><dd><p>Step size used for numerical approximation of the jacobian
+(defaults to 1.4901161193847656e-08)</p>
+</dd>
+</dl>
+<p>Do not use other options since they could break the minimizer in
+unexpected ways. Defaults can
+be set by changing the function <code class="docutils literal notranslate"><span class="pre">default_options</span></code> attribute.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><dl>
+<dt>ValueError</dt><dd><p>‘Error. f0 must be less than 0.5’ if f0 is out of range</p>
+<p>‘Order must be even for a bandpass modulator.’ if the order is
+incompatible with the modulator type.</p>
+<p>‘The opt vector must be of length xxx’ if opt is used to explicitly
+pass the NTF zeros and these are in the wrong number.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>This is actually an adaptation of the CLANS method. In the
+original paper about CLANS, NTF zeros are placed at z=1 (with the
+indication that other placements are possible). Here, the zeros are
+placed where <code class="docutils literal notranslate"><span class="pre">synthesizeNTF</span></code> places them.</p>
+<p>The computation is based on a nonlinear, nonlinearly constrained
+optimization. Since the optimizer used here is different from the
+optimizer used in other toolboxes implementing this function,
+the results may differ. The current optimizer is <code class="docutils literal notranslate"><span class="pre">SLSQP</span></code>.</p>
+<p>The function internally calls <code class="docutils literal notranslate"><span class="pre">synthesizeNTF</span></code>, and rises the same
+exceptions as <code class="docutils literal notranslate"><span class="pre">synthesizeNTF</span></code>.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="pydsm.NTFdesign.delsig.ntf_chebyshev.html" title="pydsm.NTFdesign.delsig.ntf_chebyshev"
+              >previous</a> |
+            <a href="pydsm.NTFdesign.delsig.synthesizeNTF.html" title="pydsm.NTFdesign.delsig.synthesizeNTF"
+              >next</a> |
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

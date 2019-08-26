@@ -1,0 +1,6 @@
+pydsm.NTFdesign.weighting.mult_weightings
+=========================================
+
+.. currentmodule:: pydsm.NTFdesign.weighting
+
+.. autofunction:: mult_weightings

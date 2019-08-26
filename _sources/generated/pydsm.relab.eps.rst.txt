@@ -1,0 +1,6 @@
+pydsm.relab.eps
+===============
+
+.. currentmodule:: pydsm.relab
+
+.. autofunction:: eps

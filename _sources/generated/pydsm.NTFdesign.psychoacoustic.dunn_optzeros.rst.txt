@@ -1,0 +1,6 @@
+pydsm.NTFdesign.psychoacoustic.dunn_optzeros
+============================================
+
+.. currentmodule:: pydsm.NTFdesign.psychoacoustic
+
+.. autofunction:: dunn_optzeros

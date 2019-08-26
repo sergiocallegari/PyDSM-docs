@@ -1,0 +1,184 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>pydsm.NTFdesign.helpers.spread_fir_uc_zeros &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Legacy NTF synthesis methods (pydsm.NTFDesign.legacy)" href="../pydsm.NTFdesign.legacy.html" />
+    <link rel="prev" title="pydsm.NTFdesign.helpers.maxflat_fir_zeros" href="pydsm.NTFdesign.helpers.maxflat_fir_zeros.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="../index.html">
+            <img class="logo" src="../_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="../index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="pydsm.NTFdesign.helpers.maxflat_fir_zeros.html" title="pydsm.NTFdesign.helpers.maxflat_fir_zeros"
+             accesskey="P">previous</a> |
+          <a href="../pydsm.NTFdesign.legacy.html" title="Legacy NTF synthesis methods (pydsm.NTFDesign.legacy)"
+             accesskey="N">next</a> |
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="pydsm-ntfdesign-helpers-spread-fir-uc-zeros">
+<h1>pydsm.NTFdesign.helpers.spread_fir_uc_zeros<a class="headerlink" href="#pydsm-ntfdesign-helpers-spread-fir-uc-zeros" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="pydsm.NTFdesign.helpers.spread_fir_uc_zeros">
+<code class="sig-prename descclassname">pydsm.NTFdesign.helpers.</code><code class="sig-name descname">spread_fir_uc_zeros</code><span class="sig-paren">(</span><em class="sig-param">order</em>, <em class="sig-param">OSR</em>, <em class="sig-param">cf</em>, <em class="sig-param">cf_args=[]</em>, <em class="sig-param">cf_kwargs={}</em>, <em class="sig-param">**options</em><span class="sig-paren">)</span><a class="headerlink" href="#pydsm.NTFdesign.helpers.spread_fir_uc_zeros" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compute the best spreading of zerors on the unit circle.</p>
+<p>The computed FIR transfer function is optimal according to a
+criterion expressed by the cost function <code class="docutils literal notranslate"><span class="pre">cf</span></code>.</p>
+<p>The computed FIR transfer function is used in the DELSIG
+<code class="xref py py-func docutils literal notranslate"><span class="pre">pydsm.delsig.synthesizeDSM()</span></code> design method
+(also known as <a class="reference internal" href="../pydsm.NTFdesign.html#pydsm.NTFdesign.ntf_schreier" title="pydsm.NTFdesign.ntf_schreier"><code class="xref py py-func docutils literal notranslate"><span class="pre">pydsm.NTFdesign.ntf_schreier()</span></code></a>)
+for the numerator of the noise transfer function.</p>
+<dl class="field-list">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>order</strong><span class="classifier">int</span></dt><dd><p>the transfer function order</p>
+</dd>
+<dt><strong>OSR</strong><span class="classifier">float</span></dt><dd><p>the oversampling ratio</p>
+</dd>
+<dt><strong>cf</strong><span class="classifier">function</span></dt><dd><p>cost function for the optimization. Takes a transfer
+function in zpk form as the first argument plus more
+arguments as required</p>
+</dd>
+<dt><strong>cf_args: list</strong></dt><dd><p>positional args of function <code class="docutils literal notranslate"><span class="pre">cf</span></code></p>
+</dd>
+<dt><strong>cf_kwargs: dict</strong></dt><dd><p>keyword args of function <code class="docutils literal notranslate"><span class="pre">cf</span></code></p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>zeros</strong><span class="classifier">ndarray</span></dt><dd><p>an array of complex roots of the FIR transfer function</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-odd">Other Parameters</dt>
+<dd class="field-odd"><dl>
+<dt><strong>L-BFGS-B_opts</strong><span class="classifier">dictionary, optional</span></dt><dd><p>Parameters passed to the <code class="docutils literal notranslate"><span class="pre">F-BFGS-B</span></code>
+optimizer. Allowed options are:</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">ftol</span></code></dt><dd><p>stop condition for the minimization</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">gtol</span></code></dt><dd><p>gradient stop condition for the minimization</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">maxcor</span></code></dt><dd><p>max number of variables used in hessian approximation</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">maxiter</span></code></dt><dd><p>max number of iterations</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">maxfun</span></code></dt><dd><p>max number of function evaluations</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">eps</span></code></dt><dd><p>Step size used for numerical approximation of the jacobian</p>
+</dd>
+</dl>
+<p>Do not use other options since they could break the minimizer in
+unexpected ways. Defaults can be set by changing the function
+<code class="docutils literal notranslate"><span class="pre">default_options</span></code> attribute.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><code class="xref py py-obj docutils literal notranslate"><span class="pre">scipy.optimize.minimize</span></code></dt><dd><p>for the parameters passed to the <code class="docutils literal notranslate"><span class="pre">L-BFGS-B</span></code> minimizer</p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>The system is implicitly assumed to be low-pass. Hence, the zeros
+are spread on the unit circle in the [0, pi/OSR] range.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../replicate-results.html">How to replicate the results in some recent scientific papers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="../search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="pydsm.NTFdesign.helpers.maxflat_fir_zeros.html" title="pydsm.NTFdesign.helpers.maxflat_fir_zeros"
+              >previous</a> |
+            <a href="../pydsm.NTFdesign.legacy.html" title="Legacy NTF synthesis methods (pydsm.NTFDesign.legacy)"
+              >next</a> |
+            <a href="../py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="../genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

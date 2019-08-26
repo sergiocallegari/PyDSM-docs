@@ -1,0 +1,6 @@
+pydsm.utilities.chop
+====================
+
+.. currentmodule:: pydsm.utilities
+
+.. autofunction:: chop

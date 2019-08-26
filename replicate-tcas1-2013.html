@@ -1,0 +1,285 @@
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>TCAS-I 2013 paper by Callegari and Bizzarri &#8212; PyDSM 0.14.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/agogo.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/style_variations.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="ICECS 2012 paper by Callegari and Bizzarri" href="replicate-icecs-2012.html" />
+    <link rel="prev" title="TCAS-II 2013 paper by Callegari and Bizzarri" href="replicate-tcas2-2013.html" /> 
+  </head><body>
+    <div class="header-wrapper" role="banner">
+      <div class="header">
+          <p class="logo"><a href="index.html">
+            <img class="logo" src="_static/pydsm_logo_small.png" alt="Logo"/>
+          </a></p>
+        <div class="headertitle"><a
+          href="index.html">PyDSM 0.14.0.0 documentation</a></div>
+        <div class="rel" role="navigation" aria-label="related navigation">
+          <a href="replicate-tcas2-2013.html" title="TCAS-II 2013 paper by Callegari and Bizzarri"
+             accesskey="P">previous</a> |
+          <a href="replicate-icecs-2012.html" title="ICECS 2012 paper by Callegari and Bizzarri"
+             accesskey="N">next</a> |
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a>
+        </div>
+       </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="content">
+        <div class="document">
+            
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="tcas-i-2013-paper-by-callegari-and-bizzarri">
+<h1>TCAS-I 2013 paper by Callegari and Bizzarri<a class="headerlink" href="#tcas-i-2013-paper-by-callegari-and-bizzarri" title="Permalink to this headline">¶</a></h1>
+<p>This section illustrates how to replicate the results presented in the
+paper <a class="reference internal" href="#cal13a" id="id1"><span>[Cal13a]</span></a>.</p>
+<dl class="citation">
+<dt class="label" id="cal13a"><span class="brackets"><a class="fn-backref" href="#id1">Cal13a</a></span></dt>
+<dd><p>Sergio Callegari, Federico Bizzarri <em>“Output Filter Aware
+Optimization of the Noise Shaping Properties of ΔΣ Modulators via
+Semi-Definite Programming”</em>, IEEE Transactions on Circuits and
+systems - Part I: Regular Papers, Vol. 60, N. 9,
+pp. 2352-2365. Sept. 2013. DOI: <a class="reference external" href="http://dx.doi.org/10.1109/TCSI.2013.2239091">10.1109/TCSI.2013.2239091</a>. Pre-print
+available on <a class="reference external" href="http://arxiv.org/abs/1302.3020">arXiv</a>.</p>
+</dd>
+</dl>
+<p>To this aim, some sample code is provided in the directory
+<code class="docutils literal notranslate"><span class="pre">Examples/TCAS1-2013</span></code>.</p>
+<p>The research paper provides 3 examples, in Sections V-a, V-b and V-c.</p>
+<div class="section" id="example-in-section-v-a">
+<h2>Example in section V-a<a class="headerlink" href="#example-in-section-v-a" title="Permalink to this headline">¶</a></h2>
+<p>This example refers to the design of a Digital ΔΣ modulator that is
+followed by a low pass filter in charge of removing the quantization
+noise.</p>
+<p>The corresponding code is provided in the file <code class="docutils literal notranslate"><span class="pre">demo-lp.py</span></code>. Once
+PyDSM and all its pre-requisites are installed, this can be started
+directly by opening a shell (command prompt) and typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">demo</span><span class="o">-</span><span class="n">lp</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Alternatively, the script can be opened in Spyder and launched from
+there.</p>
+<p>The code runs, showing some intermediate output from the
+optimizer. Then it provides the graphical output that is reported in
+Figures 7 and 9 in the TCAS-I paper.</p>
+<p>The code also provides a further graph, obtained by the time domain
+simulation of the modulator. This includes 3 curves:</p>
+<ol class="arabic simple">
+<li><p>The output of a ΔΣ modulator passed through the filter, where the
+modulator is designed by the technique in the TCAS-I paper.</p></li>
+<li><p>The output of a ΔΣ modulator passed through the filter, where the
+modulator is designed by the <code class="docutils literal notranslate"><span class="pre">synthesizeNTF</span></code> function from the
+DELSIG toolbox.</p></li>
+<li><p>The input of the modulator passed through the filter.</p></li>
+</ol>
+<p>This latter plot is meant to provide a graphical illustration that the
+modulator obtained by the proposed design methodology is actually
+working correctly. All the three plots should overlap almost
+perfectly. However, zooming in, little differences should become
+apparent, with the curve from the optimized modulator following the
+curve given by the input signal slightly better.</p>
+<p>The code also provides some numerical output, corresponding to the SNR
+values reported in the research paper, obtained both with the
+linearized model and with the actual time-domain simulation of the
+modulator.</p>
+<p>Note that the code does not provide any equivalent of Figure 8. For
+this, it is necessary to introduce a loop so that the NTF is optimized
+for different modulator orders. This is easy to achieve.</p>
+<p>Neither the current code provides an equivalent of Figure 10. This
+is anyway easy to achieve by using the <code class="docutils literal notranslate"><span class="pre">plotPZ</span></code> function in the
+<code class="docutils literal notranslate"><span class="pre">pydsm.delsig</span></code> module.</p>
+<p>As a final remark, the proposed example code is not particularly
+elegant, but should be rather easy to read, also thanks to the many
+comments.</p>
+</div>
+<div class="section" id="example-in-section-v-b">
+<h2>Example in section V-b<a class="headerlink" href="#example-in-section-v-b" title="Permalink to this headline">¶</a></h2>
+<p>This example refers to the design of a Digital ΔΣ modulator that is
+followed by a bandpass filter in charge of removing the quantization
+noise.</p>
+<p>The corresponding code is provided in the file <code class="docutils literal notranslate"><span class="pre">demo-bp.py</span></code>. Once
+PyDSM and all its pre-requisites are installed, this can be started
+directly by opening a shell (command prompt) and typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">demo</span><span class="o">-</span><span class="n">bp</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Alternatively, the script can be opened in Spyder and launched from
+there.</p>
+<p>The code runs, showing some intermediate output from the
+optimizer. Then it provides the graphical output that is reported in
+Figures 11 and 13 in the TCAS-I paper.</p>
+<p>The code also provides a further graph, obtained by the time domain
+simulation of the modulator. This includes 3 curves:</p>
+<ol class="arabic simple">
+<li><p>The output of a ΔΣ modulator passed through the filter, where the
+modulator is designed by the technique in the TCAS-I paper.</p></li>
+<li><p>The output of a ΔΣ modulator passed through the filter, where the
+modulator is designed by the <code class="docutils literal notranslate"><span class="pre">synthesizeNTF</span></code> function from the
+DELSIG toolbox.</p></li>
+<li><p>The input of the modulator passed through the filter.</p></li>
+</ol>
+<p>This latter plot is meant to provide a graphical illustration that the
+modulator obtained by the proposed design methodology is actually
+working correctly. All the three plots should overlap almost
+perfectly. However, zooming in, little differences should become
+apparent, with the curve from the optimized modulator following the
+curve given by the input signal slightly better.</p>
+<p>The code also provides some numerical output, corresponding to the SNR
+values reported in the research paper, obtained both with the
+linearized model and with the actual time-domain simulation of the
+modulator.</p>
+<p>Note that the code does not provide any equivalent of Figure 12. For
+this, it is necessary to introduce a loop so that the NTF is optimized
+for different modulator orders. This is easy to achieve.</p>
+<p>Nor the current code provides an equivalent of Figure 10. This
+is anyway easy to achieve by using the <code class="docutils literal notranslate"><span class="pre">plotPZ</span></code> function in the
+<code class="docutils literal notranslate"><span class="pre">pydsm.delsig</span></code> module.</p>
+<p>As a final remark, the proposed example code is not particularly
+elegant, but should be rather easy to read, also thanks to the many
+comments.</p>
+<p><strong>Warning</strong> The optimization of the modulator NTF can be particularly
+time consuming in Windows, where only a 32 bit computation environment
+is available and where some math libraries are not fully optimized to
+the specific hardware platform in CVXOPT. For maximum performance, use
+a modern 64 bit Linux distribution on a multi core CPU with fast
+floating point math and instructions set with SIMD (SSEx) extensions
+and possibly Advanced Vector Extensions (AVX).</p>
+</div>
+<div class="section" id="example-in-section-v-c">
+<h2>Example in section V-c<a class="headerlink" href="#example-in-section-v-c" title="Permalink to this headline">¶</a></h2>
+<p>This example refers to the design of a Digital ΔΣ modulator that is
+followed by a two band filter in charge of removing the
+quantization noise.</p>
+<p>The corresponding code is provided in the file
+<code class="docutils literal notranslate"><span class="pre">demo-multiband.py</span></code>. Once PyDSM and all its pre-requisites are
+installed, this can be started directly by opening a shell (command
+prompt) and typing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">demo</span><span class="o">-</span><span class="n">multiband</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>Alternatively, the script can be opened in Spyder and launched from
+there.</p>
+<p>The code runs, showing some intermediate output from the
+optimizer. Then it provides the graphical output that is reported in
+Figures 15 and 17 in the TCAS-I paper.</p>
+<p>Note that the sample code provides no comparison to Nagahara’s min-max
+design strategy.</p>
+<p>The code also provides a further graph, obtained by the time domain
+simulation of the modulator. This includes 2 curves:</p>
+<ol class="arabic simple">
+<li><p>The output of a ΔΣ modulator passed through the filter, where the
+modulator is designed by the technique in the TCAS-I paper.</p></li>
+<li><p>The input of the modulator passed through the filter.</p></li>
+</ol>
+<p>This latter plot is meant to provide a graphical illustration that the
+modulator obtained by the proposed design methodology is actually
+working correctly. The two plots should overlap almost
+perfectly.</p>
+<p>The code also provides some numerical output, corresponding to the SNR
+values reported in the research paper, obtained both with the
+linearized model and with the actual time-domain simulation of the
+modulator.</p>
+<p>Note that the code does not provide any equivalent of Figure 16. For
+this, it is necessary to introduce a loop so that the NTF is optimized
+for different modulator orders. This is easy to achieve.</p>
+<p>Nor the current code provides an equivalent of Figure 18. This
+is anyway easy to achieve by using the <code class="docutils literal notranslate"><span class="pre">plotPZ</span></code> function in the
+<code class="docutils literal notranslate"><span class="pre">pydsm.delsig</span></code> module.</p>
+<p>As a final remark, the proposed example code is not particularly
+elegant, but should be rather easy to read, also thanks to the many
+comments.</p>
+<p><strong>Warning</strong> The optimization of the modulator NTF can be particularly
+time consuming in Windows, where only a 32 bit computation environment
+is available and where some math libraries are not fully optimized to
+the specific hardware platform in CVXOPT. For maximum performance, use
+a modern 64 bit Linux distribution on a CPU with fast floating point
+math and instructions set with SIMD (SSEx) extensions and possibly
+Advanced Vector Extensions (AVX).</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+        </div>
+        <div class="sidebar">
+          <h3>Table of Contents</h3>
+          <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="reference.html">Reference guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="replicate-results.html">How to replicate the results in some recent scientific papers</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="replicate-icecs-2013.html">ICECS 2013 paper by Callegari</a></li>
+<li class="toctree-l2"><a class="reference internal" href="replicate-tcas2-2013.html">TCAS-II 2013 paper by Callegari and Bizzarri</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">TCAS-I 2013 paper by Callegari and Bizzarri</a></li>
+<li class="toctree-l2"><a class="reference internal" href="replicate-icecs-2012.html">ICECS 2012 paper by Callegari and Bizzarri</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="included_code.html">Code included in PyDSM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="more-references.html">References not provided inline in this manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+
+          <div role="search">
+            <h3 style="margin-top: 1.5em;">Search</h3>
+            <form class="search" action="search.html" method="get">
+                <input type="text" name="q" />
+                <input type="submit" value="Go" />
+            </form>
+          </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+    <div class="footer-wrapper">
+      <div class="footer">
+        <div class="left">
+          <div role="navigation" aria-label="related navigaton">
+            <a href="replicate-tcas2-2013.html" title="TCAS-II 2013 paper by Callegari and Bizzarri"
+              >previous</a> |
+            <a href="replicate-icecs-2012.html" title="ICECS 2012 paper by Callegari and Bizzarri"
+              >next</a> |
+            <a href="py-modindex.html" title="Python Module Index"
+              >modules</a> |
+            <a href="genindex.html" title="General Index"
+              >index</a>
+          </div>
+          <div role="note" aria-label="source link">
+          </div>
+        </div>
+
+        <div class="right">
+          
+    <div class="footer" role="contentinfo">
+        &#169; Copyright © 2012-2014, Sergio Callegari.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.2.0.
+    </div>
+        </div>
+        <div class="clearer"></div>
+      </div>
+    </div>
+
+  </body>
+</html>

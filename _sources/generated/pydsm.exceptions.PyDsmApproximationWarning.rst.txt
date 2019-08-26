@@ -1,0 +1,6 @@
+pydsm.exceptions.PyDsmApproximationWarning
+==========================================
+
+.. currentmodule:: pydsm.exceptions
+
+.. autoexception:: PyDsmApproximationWarning
